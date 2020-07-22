@@ -1,19 +1,261 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: src/assets
+media_folder: src/static/images
 public_folder: /assets
 collections:
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page" # Used in the UI, ie: "New Post"
-    folder: "content/blog"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Subtitle", name: "subtitle", widget: "string", required: false}
-      - { label: "Cover", name: "cover", widget: "image", required: false}
-      - { label: "Tags", name: "tags", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown"}
+  - name: "sidebar" # Used in routes, e.g., /admin/collections/blog
+    label: "Sidebar" # Used in the UI
+    folder: "_config/sidebar" # The path to the folder where the documents are stored
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Salon name",
+          name: "salonName",
+          widget: "string",
+          default: "VUK Nails",
+        }
+      - {
+          label: "Address",
+          name: "address",
+          widget: "string",
+          default: "Ленинский проспект",
+        }
+      - {
+          label: "Working days",
+          name: "workingDays",
+          widget: "string",
+          default: "Пн-Вс",
+        }
+      - {
+          label: "Working hours",
+          name: "workingHours",
+          widget: "string",
+          default: "10:00-20:00",
+        }
+      - {
+          label: "Contact phone",
+          name: "contactTelephone",
+          widget: "string",
+          default: "+7(929)924-34-37",
+        }
+      - {
+          label: "Instagram URL",
+          name: "instagramURL",
+          widget: "string",
+          default: "https://www.instagram.com/vuk_nails/",
+        }
 
+  - name: "frontpage"
+    label: "Frontpage"
+    folder: "_config/frontpage"
+    fields:
+      - {
+          label: "Frontpage Heading",
+          name: "frontpageHeading",
+          widget: "string",
+          default: "Красота без фильтров в VUK Nails!",
+        }
+      - {
+          label: "Front page Image #1",
+          name: "frontImageOne",
+          widget: "image",
+          default: "/images/hero_1.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Front page Image #2",
+          name: "frontImageTwo",
+          widget: "image",
+          default: "/images/hero_2.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Front page Image #3",
+          name: "frontImageThree",
+          widget: "image",
+          default: "/images/hero_3.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Front page Image #4",
+          name: "frontImageFour",
+          widget: "image",
+          default: "/images/hero_4.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Front page Image #5",
+          name: "frontImageFive",
+          widget: "image",
+          default: "/images/hero_5.jpg",
+          allow_multiple: false,
+        }
+
+  - name: "about_us"
+    label: "About us"
+    folder: "_config/about_us"
+    fields:
+      - {
+          label: "About us text",
+          name: "aboutUsText",
+          widget: "markdown",
+          default:
+            "Небольшая светлая студия красоты VUK Nails открылась в новом доме ЖК The MID по адресу Ленинский проспект 95Б в конце июня 2020 года.
+
+            Профессиональные мастера быстро и качественно окажут вам следующие услуги:
+
+            маникюр
+            педикюр
+            уход за волосами
+            укладки
+            брови
+            Мы гарантируем вам безопасность и приятное времяпровождение.
+            ",
+        }
+      - {
+          label: "Owner photo",
+          name: "ownerPhoto",
+          widget: "image",
+          default: "/images/olga.jpg",
+          allow_multiple: false,
+        }
+
+  - name: "team"
+    label: "Team"
+    folder: "_config/team"
+    fields:
+      - {
+          label: "Name of employee",
+          name: "employee_name",
+          widget: "string",
+          default: "Надежда",
+        }
+      - {
+          label: "Employee profession Primary",
+          name: "employee_profession_primary",
+          widget: "string",
+          default: "Мастер маникюра/педикюра",
+        }
+      - {
+          label: "Employee profession Secondary",
+          name: "employee_profession_secondary",
+          widget: "string",
+          default: "Бровист",
+        }
+      - {
+          label: "Employee picture",
+          name: "employeePicture",
+          widget: "image",
+          default: "/images/nadezhda.jpg",
+          allow_multiple: false,
+        }
+
+  - name: "services"
+    label: "Our Services"
+    folder: "_config/services"
+    fields:
+      - {
+          label: "Service #1",
+          name: "serviceOne",
+          widget: "string",
+          default: "Маникюр",
+        }
+      - {
+          label: "Service #2",
+          name: "serviceTwo",
+          widget: "string",
+          default: "Педикюр",
+        }
+      - {
+          label: "Service #3",
+          name: "serviceThree",
+          widget: "string",
+          default: "Брови",
+        }
+      - {
+          label: "Service #4",
+          name: "serviceFour",
+          widget: "string",
+          default: "Уход за волосами",
+        }
+      - {
+          label: "Service #1 picture",
+          name: "serviceOnePic",
+          widget: "image",
+          default: "/images/services_2.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Service #2 picture",
+          name: "serviceTwoPic",
+          widget: "image",
+          default: "/images/services_4.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Service #3 picture",
+          name: "serviceThreePic",
+          widget: "image",
+          default: "/images/services_3.jpg",
+          allow_multiple: false,
+        }
+      - {
+          label: "Service #4 picture",
+          name: "serviceFourPic",
+          widget: "image",
+          default: "/images/services_1.jpg",
+          allow_multiple: false,
+        }
+
+  - name: "contact"
+    label: "Contact"
+    folder: "_config/contact"
+    fields:
+      - {
+          label: "Telephone",
+          name: "contact_phone",
+          widget: "string",
+          default: "+7(929)924-34-37",
+        }
+      - {
+          label: "Address",
+          name: "contact_address",
+          widget: "string",
+          default: "ул. Ленинский проспект, д. 96 Б
+            ",
+        }
+      - {
+          label: "E Mail",
+          name: "contact_email",
+          widget: "string",
+          default: "vuknailslp@gmail.com",
+        }
+      - {
+          label: "Working Days",
+          name: "contact_days",
+          widget: "string",
+          default: "Пн-Вс",
+        }
+      - {
+          label: "Working Hours",
+          name: "contact_hours",
+          widget: "string",
+          default: "10:00-20:00",
+        }
+
+  - name: "products"
+    label: "Our Products"
+    folder: "_config/products"
+    fields:
+      - {
+          label: "Brand pictures",
+          name: "brand_pictures",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
