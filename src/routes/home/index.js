@@ -1,5 +1,24 @@
 import { h } from "preact";
 import { useEffect } from "preact/hooks";
+import { Suspense } from "preact/compat";
+import { usePrerenderData } from "@preact/prerender-data-provider";
+import Markdown from "markdown-to-jsx";
+
+const homepage = (props) => {
+  const [data, isLoading] = usePrerenderData(props);
+  return <div>{getBlogInfo(data, isLoading)}</div>;
+};
+
+const getBlogInfo = (data, isLoading) => {
+  if (data && data.data) {
+    console.log(data);
+    console.log(data.data);
+    const { details, content } = data.data;
+    console.log("details", details);
+    console.log("content", content);
+    return <p>hi</p>;
+  }
+};
 
 const Home = () => {
   /**
