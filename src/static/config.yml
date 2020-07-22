@@ -7,6 +7,7 @@ collections:
   - name: "sidebar" # Used in routes, e.g., /admin/collections/blog
     label: "Sidebar" # Used in the UI
     folder: "content/sidebar" # The path to the folder where the documents are stored
+    create: true
     fields: # The fields for each document, usually in front matter
       - {
           label: "Salon name",
@@ -48,6 +49,7 @@ collections:
   - name: "frontpage"
     label: "Frontpage"
     folder: "content/frontpage"
+    create: true
     fields:
       - {
           label: "Frontpage Heading",
@@ -94,6 +96,7 @@ collections:
   - name: "about_us"
     label: "About us"
     folder: "content/about_us"
+    create: true
     fields:
       - {
           label: "About us text",
@@ -123,6 +126,7 @@ collections:
   - name: "team"
     label: "Team"
     folder: "content/team"
+    create: true
     fields:
       - {
           label: "Name of employee",
@@ -153,6 +157,7 @@ collections:
   - name: "services"
     label: "Our Services"
     folder: "content/services"
+    create: true
     fields:
       - {
           label: "Service #1",
@@ -210,6 +215,7 @@ collections:
   - name: "contact"
     label: "Contact"
     folder: "content/contact"
+    create: true
     fields:
       - {
           label: "Telephone",
@@ -246,6 +252,7 @@ collections:
   - name: "products"
     label: "Our Products"
     folder: "content/products"
+    create: true
     fields:
       - {
           label: "Brand pictures",
