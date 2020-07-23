@@ -2,54 +2,27 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>VUK Nails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      property="og:title"
-      content="<%= (htmlWebpackPlugin.options.seo && htmlWebpackPlugin.options.seo.title) || htmlWebpackPlugin.options.title %>"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link
       rel="preload"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <% if(htmlWebpackPlugin.options.seo && 'cover' in
-    htmlWebpackPlugin.options.seo) {%>
-    <meta
-      property="og:image"
-      content="<%= htmlWebpackPlugin.options.seo.cover %>"
-    />
-    <% } %> <% if(htmlWebpackPlugin.options.seo && 'subtitle' in
-    htmlWebpackPlugin.options.seo) {%>
-    <meta
-      property="og:description"
-      content="<%= htmlWebpackPlugin.options.seo.subtitle %>"
-    />
-    <meta
-      property="description"
-      content="<%= htmlWebpackPlugin.options.seo.subtitle %>"
-    />
-    <% } %>
-    <meta
-      name="twitter:card"
-      content="<%= (htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) ? 'summary_large_image' : 'summary'%>"
-    />
-    <% if(htmlWebpackPlugin.options.seo && 'cover' in
-    htmlWebpackPlugin.options.seo) {%>
-    <meta
-      name="twitter:image"
-      content="<%= htmlWebpackPlugin.options.seo.cover %>"
-    />
-    <% } %> <% if(htmlWebpackPlugin.options.seo && 'subtitle' in
-    htmlWebpackPlugin.options.seo) {%>
-    <meta
-      property="twitter:description"
-      content="<%= htmlWebpackPlugin.options.seo.subtitle %>"
-    />
-    <% } %> <% preact.headEnd %>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/sticky-kit.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
     <% preact.bodyEnd %>

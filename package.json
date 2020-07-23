@@ -37,12 +37,14 @@
     "@preact/prerender-data-provider": "^0.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "jquery": "^3.5.1",
     "markdown-to-jsx": "^6.10.3",
+    "parse-md": "^2.0.4",
     "preact": "^10.0.0",
     "preact-cli-plugin-netlify": "^1.5.0",
     "preact-render-to-string": "^5.0.6",
     "preact-router": "^3.0.1",
-    "parse-md": "^2.0.4"
+    "react-script-tag": "^1.1.2"
   },
   "jest": {
     "preset": "jest-preset-preact"

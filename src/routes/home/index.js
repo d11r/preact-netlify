@@ -4,6 +4,8 @@ import { Suspense } from "preact/compat";
 import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
+import ScriptTag from "react-script-tag";
+import $ from "jquery";
 
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
@@ -520,7 +522,7 @@ const Home = () => {
             <div class="row">
               <div class="col-md-12 owl-carousel owl-theme">
                 {m.products.brand_pictures.map((p) => (
-                  <div class="brand-logo">
+                  <div class="brand-logo" key={p}>
                     <img src={getImgPath(p)} alt="" />
                   </div>
                 ))}
@@ -557,16 +559,17 @@ const Home = () => {
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-      <script src="../../js/jquery.min.js"></script>
-      <script src="../../js/modernizr-2.6.2.min.js"></script>
-      <script src="../../js/jquery.easing.1.3.js"></script>
-      <script src="../../js/bootstrap.min.js"></script>
-      <script src="../../js/jquery.waypoints.min.js"></script>
-      <script src="../../js/jquery.flexslider-min.js"></script>
-      <script src="../../js/sticky-kit.min.js"></script>
-      <script src="../../js/jquery.magnific-popup.min.js"></script>
-      <script src="../../js/owl.carousel.min.js"></script>
-      <script src="../../js/main.js"></script>
+
+      <ScriptTag src="../../js/jquery.min.js" />
+      <ScriptTag src="../../js/modernizr-2.6.2.min.js" />
+      <ScriptTag src="../../js/jquery.easing.1.3.js" />
+      <ScriptTag src="../../js/bootstrap.min.js" />
+      <ScriptTag src="../../js/jquery.waypoints.min.js" />
+      <ScriptTag src="../../js/jquery.flexslider-min.js" />
+      <ScriptTag src="../../js/sticky-kit.min.js" />
+      <ScriptTag src="../../js/jquery.magnific-popup.min.js" />
+      <ScriptTag src="../../js/owl.carousel.min.js" />
+      <ScriptTag src="../../js/main.js" />
     </div>
   );
 };
