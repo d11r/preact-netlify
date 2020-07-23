@@ -523,7 +523,7 @@ const Home = () => {
               <div class="col-md-12 owl-carousel owl-theme">
                 {m.products.brand_pictures.map((p) => (
                   <div class="brand-logo" key={p}>
-                    <img src={getImgPath(p)} alt="" />
+                    <img src={getImgPath(p)} alt="product" />
                   </div>
                 ))}
               </div>
