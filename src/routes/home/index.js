@@ -5,6 +5,8 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
+const getImgPath = (p) => `../../${p.split("/").slice(-2).join("/")}`;
+
 const Home = () => {
   // Static content injection
   const [data, isLoading] = usePrerenderData({ url: "/" });
@@ -501,12 +503,11 @@ const Home = () => {
             </div>
             <div class="row">
               <div class="col-md-12 owl-carousel owl-theme">
-                {/* 
                 {m.products.brand_pictures.map((p) => (
                   <div class="brand-logo">
-                    <img src={p} alt="" />
+                    <img src={getImgPath(p)} alt="" />
                   </div>
-                ))}*/}
+                ))}
               </div>
             </div>
           </div>
