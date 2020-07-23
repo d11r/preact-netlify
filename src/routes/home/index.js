@@ -501,11 +501,12 @@ const Home = () => {
             </div>
             <div class="row">
               <div class="col-md-12 owl-carousel owl-theme">
+                {/* 
                 {m.products.brand_pictures.map((p) => (
                   <div class="brand-logo">
                     <img src={p} alt="" />
                   </div>
-                ))}
+                ))}*/}
               </div>
             </div>
           </div>
