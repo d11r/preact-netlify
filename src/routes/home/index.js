@@ -283,10 +283,7 @@ const Home = () => {
                         ) && <p>{t.employee_profession_secondary}</p>}
                         <div class="social">
                           <div class="full-width">
-                            <a
-                              href="https://www.instagram.com/vuk_nails/"
-                              class="icon"
-                            >
+                            <a href={m.sidebar.instagramURL} class="icon">
                               <i class="ti-instagram"></i>
                             </a>
                           </div>
@@ -314,11 +311,14 @@ const Home = () => {
               <div class="col-md-6">
                 <div class="item">
                   <div class="position-re o-hidden">
-                    <img src="../../images/services_2.jpg" alt="" />
+                    <img
+                      src={`../..${m.services.serviceOnePic}`}
+                      alt={m.services.serviceOne}
+                    />
                   </div>
                   <div class="con">
                     <a href="services">
-                      <h5>Маникюр</h5>
+                      <h5>{m.services.serviceOne}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
                       </p>
@@ -329,11 +329,14 @@ const Home = () => {
               <div class="col-md-6">
                 <div class="item">
                   <div class="position-re o-hidden">
-                    <img src="../../images/services_4.jpg" alt="" />
+                    <img
+                      src={`../..${m.services.serviceTwoPic}`}
+                      alt={m.services.serviceTwo}
+                    />
                   </div>
                   <div class="con">
                     <a href="services">
-                      <h5>Педикюр</h5>
+                      <h5>{m.services.serviceTwo}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
                       </p>
@@ -344,11 +347,14 @@ const Home = () => {
               <div class="col-md-6">
                 <div class="item">
                   <div class="position-re o-hidden">
-                    <img src="../../images/services_3.jpg" alt="" />
+                    <img
+                      src={`../..${m.services.serviceThreePic}`}
+                      alt={m.services.serviceThree}
+                    />
                   </div>
                   <div class="con">
                     <a href="services">
-                      <h5>Брови</h5>
+                      <h5>{m.services.serviceThree}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
                       </p>
@@ -359,11 +365,14 @@ const Home = () => {
               <div class="col-md-6">
                 <div class="item">
                   <div class="position-re o-hidden">
-                    <img src="../../images/services_1.jpg" alt="" />
+                    <img
+                      src={`../..${m.services.serviceFourPic}`}
+                      alt={m.services.serviceFour}
+                    />
                   </div>
                   <div class="con">
                     <a href="services">
-                      <h5>Уход за волосами</h5>
+                      <h5>{m.services.serviceFour}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
                       </p>
@@ -393,7 +402,7 @@ const Home = () => {
                     <span class="icon et-phone"></span>
                     <div class="feat-info2">
                       <h5>Телефон</h5>
-                      <h6>+7(929)924-34-37</h6>
+                      <h6>{m.contact.contact_phone}</h6>
                     </div>
                   </div>
                 </div>
@@ -402,7 +411,7 @@ const Home = () => {
                     <span class="icon et-map-pin"></span>
                     <div class="feat-info2">
                       <h5>Адрес</h5>
-                      <h6>ул. Ленинский проспект, д. 96 Б</h6>
+                      <h6>{m.contact.contact_address}</h6>
                     </div>
                   </div>
                 </div>
@@ -411,7 +420,7 @@ const Home = () => {
                     <span class="icon et-notebook"></span>
                     <div class="feat-info2">
                       <h5>E-Mail</h5>
-                      <h6>vuknailslp@gmail.com</h6>
+                      <h6>{m.contact.contact_email}</h6>
                     </div>
                   </div>
                 </div>
@@ -419,8 +428,8 @@ const Home = () => {
                   <div class="feat-inner2">
                     <span class="icon et-clock"></span>
                     <div class="feat-info2">
-                      <h5>Пн-Вс</h5>
-                      <h6>10:00-20:00</h6>
+                      <h5>{m.contact.contact_days}</h5>
+                      <h6>{m.contact.contact_hours}</h6>
                     </div>
                   </div>
                 </div>
@@ -492,33 +501,11 @@ const Home = () => {
             </div>
             <div class="row">
               <div class="col-md-12 owl-carousel owl-theme">
-                <div class="brand-logo">
-                  <img src="../../images/brand_1.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_2.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_3.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_4.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_5.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_6.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_7.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_8.jpg" alt="" />
-                </div>
-                <div class="brand-logo">
-                  <img src="../../images/brand_9.jpg" alt="" />
-                </div>
+                {m.products.brand_pictures.map((p) => (
+                  <div class="brand-logo">
+                    <img src={p} alt="" />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
