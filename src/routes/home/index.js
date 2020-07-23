@@ -11,7 +11,13 @@ const Home = () => {
   const content = data.data;
   const m = {};
   content.forEach((c) => {
-    m[c.id] = { ...c.edges[0].details };
+    if (c.id === "team") {
+      m[c.id] = [];
+      for (let i = 0; i < c.edges.length; i++)
+        m[c.id].push({ ...c.edges[i].details });
+    } else {
+      m[c.id] = { ...c.edges[0].details };
+    }
   });
   console.log(m);
 
@@ -259,30 +265,37 @@ const Home = () => {
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
-                <div class="item mb-30">
-                  <div class="img">
-                    <img src="../../images/nadezhda.jpg" alt="" />
-                  </div>
-                  <div class="info valign">
-                    <div class="full-width">
-                      <h6>Надежда</h6>
-                      <span>Мастер маникюра/педикюра</span>
-                      <p>Бровист</p>
-                      <div class="social">
-                        <div class="full-width">
-                          <a
-                            href="https://www.instagram.com/vuk_nails/"
-                            class="icon"
-                          >
-                            <i class="ti-instagram"></i>
-                          </a>
+              {m.team.map((t) => (
+                <div class="col-md-6">
+                  <div class="item mb-30">
+                    <div class="img">
+                      <img
+                        src={`../..${t.employeePicture}`}
+                        alt={`${t.employee_name} profile picture`}
+                      />
+                    </div>
+                    <div class="info valign">
+                      <div class="full-width">
+                        <h6>{t.employee_name}</h6>
+                        <span>{t.employee_profession_primary}</span>
+                        {!["", "*"].includes(
+                          t.employee_profession_secondary
+                        ) && <p>{t.employee_profession_secondary}</p>}
+                        <div class="social">
+                          <div class="full-width">
+                            <a
+                              href="https://www.instagram.com/vuk_nails/"
+                              class="icon"
+                            >
+                              <i class="ti-instagram"></i>
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
