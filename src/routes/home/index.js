@@ -116,7 +116,9 @@ const Home = () => {
             <ul class="slides">
               <li
                 style={`
-                  background-image: url(../..${m.frontpage.frontImageOne})
+                  background-image: url(${getImgPath(
+                    m.frontpage.frontImageOne
+                  )})
                 `}
               >
                 <div class="overlay"></div>
@@ -139,7 +141,9 @@ const Home = () => {
               </li>
               <li
                 style={`
-                  background-image: url(../..${m.frontpage.frontImageTwo})
+                  background-image: url(${getImgPath(
+                    m.frontpage.frontImageTwo
+                  )})
                 `}
               >
                 <div class="overlay"></div>
@@ -162,7 +166,9 @@ const Home = () => {
               </li>
               <li
                 style={`
-                  background-image: url(../..${m.frontpage.frontImageThree})
+                  background-image: url(${getImgPath(
+                    m.frontpage.frontImageThree
+                  )})
                 `}
               >
                 <div class="overlay"></div>
@@ -185,7 +191,9 @@ const Home = () => {
               </li>
               <li
                 style={`
-                  background-image: url(../..${m.frontpage.frontImageFour})
+                  background-image: url(${getImgPath(
+                    m.frontpage.frontImageFour
+                  )})
                 `}
               >
                 <div class="overlay"></div>
@@ -208,7 +216,9 @@ const Home = () => {
               </li>
               <li
                 style={`
-                  background-image: url(../..${m.frontpage.frontImageFive})
+                  background-image: url(${getImgPath(
+                    m.frontpage.frontImageFive
+                  )})
                 `}
               >
                 <div class="overlay"></div>
@@ -247,7 +257,7 @@ const Home = () => {
             <div class="row">
               <div class="col-md-6">
                 <img
-                  src="../../images/olga.jpg"
+                  src={getImgPath(m.about_us.ownerPhoto)}
                   class="img-fluid mb-30"
                   alt=""
                 />
@@ -278,7 +288,7 @@ const Home = () => {
                   <div class="item mb-30">
                     <div class="img">
                       <img
-                        src={`../..${t.employeePicture}`}
+                        src={getImgPath(t.employeePicture)}
                         alt={`${t.employee_name} profile picture`}
                       />
                     </div>
@@ -320,7 +330,7 @@ const Home = () => {
                 <div class="item">
                   <div class="position-re o-hidden">
                     <img
-                      src={`../..${m.services.serviceOnePic}`}
+                      src={getImgPath(m.services.serviceOnePic)}
                       alt={m.services.serviceOne}
                     />
                   </div>
@@ -338,7 +348,7 @@ const Home = () => {
                 <div class="item">
                   <div class="position-re o-hidden">
                     <img
-                      src={`../..${m.services.serviceTwoPic}`}
+                      src={getImgPath(m.services.serviceTwoPic)}
                       alt={m.services.serviceTwo}
                     />
                   </div>
@@ -356,7 +366,7 @@ const Home = () => {
                 <div class="item">
                   <div class="position-re o-hidden">
                     <img
-                      src={`../..${m.services.serviceThreePic}`}
+                      src={getImgPath(m.services.serviceThreePic)}
                       alt={m.services.serviceThree}
                     />
                   </div>
@@ -374,7 +384,7 @@ const Home = () => {
                 <div class="item">
                   <div class="position-re o-hidden">
                     <img
-                      src={`../..${m.services.serviceFourPic}`}
+                      src={getImgPath(m.services.serviceFourPic)}
                       alt={m.services.serviceFour}
                     />
                   </div>
