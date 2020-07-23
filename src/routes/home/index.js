@@ -45,6 +45,8 @@ const Home = () => {
     }
   }, []);
 
+  const brands = m.products.brand_pictures.map((p) => getImgPath(p));
+
   return (
     <div id="betty-page">
       <a href="#" class="js-betty-nav-toggle betty-nav-toggle">
@@ -521,9 +523,9 @@ const Home = () => {
             </div>
             <div class="row">
               <div class="col-md-12 owl-carousel owl-theme">
-                {m.products.brand_pictures.map((p) => (
-                  <div class="brand-logo" key={p}>
-                    <img src={getImgPath(p)} alt="product" />
+                {brands.map((b) => (
+                  <div class="brand-logo">
+                    <img src={b} />
                   </div>
                 ))}
               </div>
@@ -556,20 +558,21 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
 
-      <ScriptTag src="../../js/jquery.min.js" />
-      <ScriptTag src="../../js/modernizr-2.6.2.min.js" />
-      <ScriptTag src="../../js/jquery.easing.1.3.js" />
-      <ScriptTag src="../../js/bootstrap.min.js" />
-      <ScriptTag src="../../js/jquery.waypoints.min.js" />
-      <ScriptTag src="../../js/jquery.flexslider-min.js" />
-      <ScriptTag src="../../js/sticky-kit.min.js" />
-      <ScriptTag src="../../js/jquery.magnific-popup.min.js" />
-      <ScriptTag src="../../js/owl.carousel.min.js" />
-      <ScriptTag src="../../js/main.js" />
+      <ScriptTag src="js/jquery.min.js" />
+      <ScriptTag src="js/modernizr-2.6.2.min.js" />
+      <ScriptTag src="js/jquery.easing.1.3.js" />
+      <ScriptTag src="js/bootstrap.min.js" />
+      <ScriptTag src="js/jquery.waypoints.min.js" />
+      <ScriptTag src="js/jquery.flexslider-min.js" />
+      <ScriptTag src="js/sticky-kit.min.js" />
+      <ScriptTag src="js/jquery.magnific-popup.min.js" />
+      <ScriptTag src="js/owl.carousel.min.js" />
+      <ScriptTag src="js/main.js" />
     </div>
   );
 };
