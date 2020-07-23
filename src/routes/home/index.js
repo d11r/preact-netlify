@@ -5,7 +5,13 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
-const getImgPath = (p) => `../../${p.split("/").slice(-2).join("/")}`;
+const getImgPath = (p) => {
+  if (p.split("/").length === 2) {
+    return `../..${p}`;
+  } else {
+    return `../../${p.split("/").slice(-2).join("/")}`;
+  }
+};
 
 const Home = () => {
   // Static content injection
