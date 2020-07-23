@@ -1,0 +1,12 @@
+---
+brand_pictures:
+  - /assets/brand_1.jpg
+  - /assets/brand_2.jpg
+  - /assets/brand_3.jpg
+  - /assets/brand_4.jpg
+  - /assets/brand_5.jpg
+  - /assets/brand_6.jpg
+  - /assets/brand_7.jpg
+  - /assets/brand_8.jpg
+  - /assets/brand_9.jpg
+---
