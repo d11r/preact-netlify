@@ -4,11 +4,11 @@ backend:
 media_folder: src/static/images
 public_folder: /assets
 collections:
-  - name: "sidebar" # Used in routes, e.g., /admin/collections/blog
-    label: "Sidebar" # Used in the UI
-    folder: "content/sidebar" # The path to the folder where the documents are stored
+  - name: "sidebar"
+    label: "Sidebar"
+    folder: "content/sidebar"
     create: true
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {
           label: "Salon name",
           name: "salonName",
@@ -44,6 +44,12 @@ collections:
           name: "instagramURL",
           widget: "string",
           default: "https://www.instagram.com/vuk_nails/",
+        }
+      - {
+          label: "Facebook URL",
+          name: "facebookURL",
+          widget: "string",
+          default: "https://www.facebook.com/VUK-NAILS-104670354667176/",
         }
 
   - name: "frontpage"

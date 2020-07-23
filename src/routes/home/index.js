@@ -4,28 +4,17 @@ import { Suspense } from "preact/compat";
 import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 
-const homepage = (props) => {
-  const [data, isLoading] = usePrerenderData(props);
-  return <div>{getBlogInfo(data, isLoading)}</div>;
-};
-
-const getBlogInfo = (data, isLoading) => {
-  if (data && data.data) {
-    console.log(data);
-    console.log(data.data);
-    const { details, content } = data.data;
-    console.log("details", details);
-    console.log("content", content);
-    return <p>hi</p>;
-  }
-};
-
 const Home = () => {
-  /**
-   * Netlify CMS's accept invite link land on home page.
-   * This redirection takes it to the right place(/admin).
-   */
+  // Static content injection
+  const [data, isLoading] = usePrerenderData({ url: "/" });
+  const content = data.data;
+  const m = {};
+  content.forEach((c) => {
+    m[c.id] = { ...c.edges[0].details };
+  });
+  console.log(m);
 
+  // Netlify admin redirect
   useEffect(() => {
     if (
       window !== undefined &&
@@ -44,14 +33,14 @@ const Home = () => {
       <a href="#" class="js-betty-nav-toggle betty-nav-toggle">
         <i></i>
       </a>
-
       <aside id="betty-aside">
         <div class="betty-logo">
           <a href="index.html">
             <img src="../../images/logo.png" alt="Yes Nail Logo" />
           </a>
           <h1>
-            <a href="index.html">VUK Nails</a> <span>Ленинский проспект</span>
+            <a href="index.html">{m.sidebar.salonName}</a>{" "}
+            <span>{m.sidebar.address}</span>
           </h1>
         </div>
 
@@ -76,8 +65,8 @@ const Home = () => {
           <div class="feat-inner">
             <span class="icon et-clock"></span>
             <div class="feat-info">
-              <h5>Пн-Вс</h5>
-              <h6>10:00-20:00</h6>
+              <h5>{m.sidebar.workingDays}</h5>
+              <h6>{m.sidebar.workingHours}</h6>
             </div>
           </div>
         </div>
@@ -86,7 +75,7 @@ const Home = () => {
             <span class="icon et-phone"></span>
             <div class="feat-info">
               <h5>Телефон</h5>
-              <h6>+7(929)924-34-37</h6>
+              <h6>{m.sidebar.contactTelephone}</h6>
             </div>
           </div>
         </div>
@@ -94,14 +83,18 @@ const Home = () => {
         <div class="betty-footer">
           <ul>
             <li>
-              <a href="https://www.instagram.com/vuk_nails/">
+              <a href={m.sidebar.instagramURL}>
                 <i class="ti-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href={m.sidebar.facebookURL}>
+                <i class="ti-facebook"></i>
               </a>
             </li>
           </ul>
         </div>
       </aside>
-
       <div id="betty-main">
         <aside id="betty-hero" class="js-fullheight">
           <div class="flexslider js-fullheight">
@@ -560,11 +553,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/modernizr-2.6.2.min.js"></script>
       <script src="../../js/jquery.easing.1.3.js"></script>
