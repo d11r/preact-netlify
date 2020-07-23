@@ -129,7 +129,7 @@ const Home = () => {
                         <div class="desc">
                           <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
-                            <a href="tel:+7(929)924-34-37">
+                            <a href={`tel:${m.contact.contact_phone}`}>
                               Связаться с администратором
                             </a>
                           </div>
@@ -154,7 +154,7 @@ const Home = () => {
                         <div class="desc">
                           <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
-                            <a href="tel:+7(929)924-34-37">
+                            <a href={`tel:${m.contact.contact_phone}`}>
                               Связаться с администратором
                             </a>
                           </div>
@@ -179,7 +179,7 @@ const Home = () => {
                         <div class="desc">
                           <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
-                            <a href="tel:+7(929)924-34-37">
+                            <a href={`tel:${m.contact.contact_phone}`}>
                               Связаться с администратором
                             </a>
                           </div>
@@ -204,7 +204,7 @@ const Home = () => {
                         <div class="desc">
                           <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
-                            <a href="tel:+7(929)924-34-37">
+                            <a href={`tel:${m.contact.contact_phone}`}>
                               Связаться с администратором
                             </a>
                           </div>
@@ -229,7 +229,7 @@ const Home = () => {
                         <div class="desc">
                           <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
-                            <a href="tel:+7(929)924-34-37">
+                            <a href={`tel:${m.contact.contact_phone}`}>
                               Связаться с администратором
                             </a>
                           </div>
@@ -539,7 +539,7 @@ const Home = () => {
                   </a>
                   <h2 class="text-center">
                     VUK Nails
-                    <span>Ленинский проспект д. 96 Б</span>
+                    <span>{m.contact.contact_address}</span>
                   </h2>
                 </div>
               </div>
