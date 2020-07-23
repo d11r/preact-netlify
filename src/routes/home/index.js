@@ -3,6 +3,7 @@ import { useEffect } from "preact/hooks";
 import { Suspense } from "preact/compat";
 import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
+const parseMD = require("parse-md").default;
 
 const Home = () => {
   // Static content injection
@@ -100,9 +101,9 @@ const Home = () => {
           <div class="flexslider js-fullheight">
             <ul class="slides">
               <li
-                style="
-                  background-image: url(../../images/hero_1.jpg);
-                "
+                style={`
+                  background-image: url(../..${m.frontpage.frontImageOne})
+                `}
               >
                 <div class="overlay"></div>
                 <div class="container-fluid">
@@ -110,7 +111,7 @@ const Home = () => {
                     <div class="col-md-12 js-fullheight slider-text">
                       <div class="slider-text-inner">
                         <div class="desc">
-                          <h1>Красота без фильтров в VUK Nails!</h1>
+                          <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
                             <a href="tel:+7(929)924-34-37">
                               Связаться с администратором
@@ -123,9 +124,9 @@ const Home = () => {
                 </div>
               </li>
               <li
-                style="
-                  background-image: url(../../images/hero_2.jpg);
-                "
+                style={`
+                  background-image: url(../..${m.frontpage.frontImageTwo})
+                `}
               >
                 <div class="overlay"></div>
                 <div class="container-fluid">
@@ -133,7 +134,7 @@ const Home = () => {
                     <div class="col-md-12 js-fullheight slider-text">
                       <div class="slider-text-inner">
                         <div class="desc">
-                          <h1>Красота без фильтров в VUK Nails!</h1>
+                          <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
                             <a href="tel:+7(929)924-34-37">
                               Связаться с администратором
@@ -146,9 +147,9 @@ const Home = () => {
                 </div>
               </li>
               <li
-                style="
-                  background-image: url(../../images/hero_3.jpg);
-                "
+                style={`
+                  background-image: url(../..${m.frontpage.frontImageThree})
+                `}
               >
                 <div class="overlay"></div>
                 <div class="container-fluid">
@@ -156,7 +157,7 @@ const Home = () => {
                     <div class="col-md-12 js-fullheight slider-text">
                       <div class="slider-text-inner">
                         <div class="desc">
-                          <h1>Красота без фильтров в VUK Nails!</h1>
+                          <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
                             <a href="tel:+7(929)924-34-37">
                               Связаться с администратором
@@ -169,9 +170,9 @@ const Home = () => {
                 </div>
               </li>
               <li
-                style="
-                  background-image: url(../../images/hero_4.jpg);
-                "
+                style={`
+                  background-image: url(../..${m.frontpage.frontImageFour})
+                `}
               >
                 <div class="overlay"></div>
                 <div class="container-fluid">
@@ -179,7 +180,7 @@ const Home = () => {
                     <div class="col-md-12 js-fullheight slider-text">
                       <div class="slider-text-inner">
                         <div class="desc">
-                          <h1>Красота без фильтров в VUK Nails!</h1>
+                          <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
                             <a href="tel:+7(929)924-34-37">
                               Связаться с администратором
@@ -192,9 +193,9 @@ const Home = () => {
                 </div>
               </li>
               <li
-                style="
-                  background-image: url(../../images/hero_5.jpg);
-                "
+                style={`
+                  background-image: url(../..${m.frontpage.frontImageFive})
+                `}
               >
                 <div class="overlay"></div>
                 <div class="container-fluid">
@@ -202,7 +203,7 @@ const Home = () => {
                     <div class="col-md-12 js-fullheight slider-text">
                       <div class="slider-text-inner">
                         <div class="desc">
-                          <h1>Красота без фильтров в VUK Nails!</h1>
+                          <h1>{m.frontpage.frontpageHeading}</h1>
                           <div class="btn btn-contact">
                             <a href="tel:+7(929)924-34-37">
                               Связаться с администратором
@@ -238,25 +239,7 @@ const Home = () => {
                 />
               </div>
               <div class="col-md-6">
-                <p>
-                  Небольшая светлая студия красоты VUK Nails открылась в новом
-                  доме ЖК The MID по адресу Ленинский проспект 95Б в конце июня
-                  2020 года.
-                </p>
-                <p>
-                  Профессиональные мастера быстро и качественно окажут вам
-                  следующие услуги:
-                  <ul class="classic-list">
-                    <li>маникюр</li>
-                    <li>педикюр</li>
-                    <li>уход за волосами</li>
-                    <li>укладки</li>
-                    <li>брови</li>
-                  </ul>
-                </p>
-                <p>
-                  Мы гарантируем вам безопасность и приятное времяпровождение.
-                </p>
+                <Markdown>{parseMD(m.about_us.aboutUsText).content}</Markdown>
                 <br />
                 <h2 class="betty-about-heading">Ольга Вукович</h2>
               </div>

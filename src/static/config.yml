@@ -133,6 +133,7 @@ collections:
     label: "Team"
     folder: "content/team"
     create: true
+    widget: "list"
     fields:
       - {
           label: "Name of employee",
