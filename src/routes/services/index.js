@@ -5,13 +5,6 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
-import "../../static/css/animate.css";
-import "../../static/css/bootstrap.css";
-import "../../static/css/flaticon.css";
-import "../../static/css/magnific-popup.css";
-import "../../static/css/style.css";
-import "../../static/css/themify-icons.css";
-
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
@@ -335,8 +328,6 @@ const Services = () => {
       <script src="/js/main.js" />
       <link rel="itemprop" src="/css/bootstrap.css" />
       <link rel="itemprop" src="/css/animate.css" />
-      <link rel="itemprop" src="/css/owl.carousel.min.css" />
-      <link rel="itemprop" src="/css/owl.theme.defaults.min.css" />
       <link rel="itemprop" src="/css/themify-icons.css" />
       <link rel="itemprop" src="/css/flaticon.css" />
       <link rel="itemprop" src="/css/flexslider.css" />
