@@ -8,6 +8,7 @@ import Services from "../routes/services";
 import NotFoundPage from "../routes/notfound";
 
 // import css
+/*
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/css/animate.css";
 import "../style/css/et-lineicons.css";
@@ -18,6 +19,7 @@ import "../style/css/owl.carousel.min.css";
 import "../style/css/owl.theme.default.min.css";
 import "../style/css/style.css";
 import "../style/css/themify-icons.css";
+*/
 
 export default class App extends Component {
   /** Gets fired when the route changes.
