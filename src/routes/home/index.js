@@ -564,7 +564,6 @@ const Home = () => {
       <script src="js/jquery.min.js" />
       <script src="js/modernizr-2.6.2.min.js" />
       <script src="js/jquery.easing.1.3.js" />
-      <script src="js/bootstrap.min.js" />
       <script src="js/jquery.waypoints.min.js" />
       <script src="js/jquery.flexslider-min.js" />
       <script src="js/sticky-kit.min.js" />

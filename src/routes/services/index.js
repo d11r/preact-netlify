@@ -492,7 +492,6 @@ const Services = () => {
       <script src="../../style/js/jquery.min.js"></script>
       <script src="../../style/js/modernizr-2.6.2.min.js"></script>
       <script src="../../style/js/jquery.easing.1.3.js"></script>
-      <script src="../../style/js/bootstrap.min.js"></script>
       <script src="../../style/js/jquery.waypoints.min.js"></script>
       <script src="../../style/js/jquery.flexslider-min.js"></script>
       <script src="../../style/js/sticky-kit.min.js"></script>
