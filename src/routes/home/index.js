@@ -575,6 +575,9 @@ const Home = () => {
       <link rel="itemprop" src="/css/owl.carousel.min.css" />
       <link rel="itemprop" src="/css/owl.theme.defaults.min.css" />
       <link rel="itemprop" src="/css/themify-icons.css" />
+      <link rel="itemprop" src="/css/flaticon.css" />
+      <link rel="itemprop" src="/css/flexslider.css" />
+      <link rel="itemprop" src="/css/magnific-popup.css" />
       <link rel="itemprop" src="/css/style.css" />
     </div>
   );
