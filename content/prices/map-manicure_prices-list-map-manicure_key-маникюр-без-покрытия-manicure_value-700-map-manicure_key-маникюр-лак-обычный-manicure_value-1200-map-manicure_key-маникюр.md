@@ -72,4 +72,36 @@ pedicure_prices:
     pedicure_value: "2400"
   - pedicure_key: Детский педикюр (до 13 лет)
     pedicure_value: "600"
+brovi_prices:
+  - brovi_key: Форма бровей пинцет/нить
+    brovi_value: 900-1000
+  - brovi_key: Коррекция + окрашивание бровей
+    brovi_value: "1200"
+  - brovi_key: Окрашивание бровей краска/хна
+    brovi_value: 700-800
+  - brovi_key: Коррекция бровей пинцет/нить
+    brovi_value: 600-700
+  - brovi_key: Удаление усиков ниткой/воском
+    brovi_value: "300"
+uhodi_prices:
+  - uhodi_key: Без мытья /с мытьём
+    uhodi_value: 500/1000
+  - uhodi_key: Брашинг, плойки, по форме
+    uhodi_value: 1500-2000
+  - uhodi_key: Вечерняя Прическа
+    uhodi_value: 1000-1500
+  - uhodi_key: Коррекция бровей пинцет/нить
+    uhodi_value: 600-700
+  - uhodi_key: Удаление усиков ниткой/воском
+    uhodi_value: "300"
+uhodi_additional_prices:
+  - uhodi_key: Антивозрастной уход мгновенного действия
+    uhodi_description: ALTEREGO
+    uhodi_value: 2100/2400/2700/3000
+  - uhodi_key: Уход для увлажнения волос
+    uhodi_description: HYDRATE
+    uhodi_value: 900/1200/1500/1800
+  - uhodi_key: Дисциплинирующий уход для пушащихся волос
+    uhodi_description: EGOLISS
+    uhodi_value: 900/1200/1500/1800
 ---
