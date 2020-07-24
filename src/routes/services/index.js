@@ -5,6 +5,13 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
+import "../../static/css/animate.css";
+import "../../static/css/bootstrap.css";
+import "../../static/css/flaticon.css";
+import "../../static/css/magnific-popup.css";
+import "../../static/css/style.css";
+import "../../static/css/themify-icons.css";
+
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
@@ -316,6 +323,25 @@ const Services = () => {
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
+
+      <script src="/js/jquery.min.js" />
+      <script src="/js/modernizr-2.6.2.min.js" />
+      <script src="/js/jquery.easing.1.3.js" />
+      <script src="/js/jquery.waypoints.min.js" />
+      <script src="/js/jquery.flexslider-min.js" />
+      <script src="/js/sticky-kit.min.js" />
+      <script src="/js/jquery.magnific-popup.min.js" />
+      <script src="/js/owl.carousel.min.js" />
+      <script src="/js/main.js" />
+      <link rel="itemprop" src="/css/bootstrap.css" />
+      <link rel="itemprop" src="/css/animate.css" />
+      <link rel="itemprop" src="/css/owl.carousel.min.css" />
+      <link rel="itemprop" src="/css/owl.theme.defaults.min.css" />
+      <link rel="itemprop" src="/css/themify-icons.css" />
+      <link rel="itemprop" src="/css/flaticon.css" />
+      <link rel="itemprop" src="/css/flexslider.css" />
+      <link rel="itemprop" src="/css/magnific-popup.css" />
+      <link rel="itemprop" src="/css/style.css" />
     </div>
   );
 };
