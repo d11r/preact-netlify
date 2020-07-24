@@ -294,6 +294,68 @@ collections:
               name: "manicure_value",
               widget: "string",
             }
+          - {
+              label: "manicure additional description",
+              name: "manicure_description",
+              widget: "string",
+            }
+      - label: "Manicure additional prices"
+        name: "manicure_additional_prices"
+        widget: "list"
+        fields:
+          - {
+              label: "manicure service name",
+              name: "manicure_key",
+              widget: "string",
+            }
+          - {
+              label: "manicure service value (in RUB)",
+              name: "manicure_value",
+              widget: "string",
+            }
+          - {
+              label: "manicure additional description",
+              name: "manicure_description",
+              widget: "string",
+            }
+      - label: "Manicure healing prices"
+        name: "manicure_healing_prices"
+        widget: "list"
+        fields:
+          - {
+              label: "manicure service name",
+              name: "manicure_key",
+              widget: "string",
+            }
+          - {
+              label: "manicure service value (in RUB)",
+              name: "manicure_value",
+              widget: "string",
+            }
+          - {
+              label: "manicure additional description",
+              name: "manicure_description",
+              widget: "string",
+            }
+      - label: "Manicure designs prices"
+        name: "manicure_design_prices"
+        widget: "list"
+        fields:
+          - {
+              label: "manicure service name",
+              name: "manicure_key",
+              widget: "string",
+            }
+          - {
+              label: "manicure service value (in RUB)",
+              name: "manicure_value",
+              widget: "string",
+            }
+          - {
+              label: "manicure additional description",
+              name: "manicure_description",
+              widget: "string",
+            }
       - label: "Pedicure prices"
         name: "pedicure_prices"
         widget: "list"
@@ -308,6 +370,11 @@ collections:
               name: "pedicure_value",
               widget: "string",
             }
+          - {
+              label: "pedicure additional description",
+              name: "pedicure_description",
+              widget: "string",
+            }
       - label: "Brovi prices"
         name: "brovi_prices"
         widget: "list"
@@ -318,6 +385,11 @@ collections:
               name: "brovi_value",
               widget: "string",
             }
+          - {
+              label: "brovi additional description",
+              name: "brovi_description",
+              widget: "string",
+            }
       - label: "Uhodi prices"
         name: "uhodi_prices"
         widget: "list"
@@ -326,5 +398,25 @@ collections:
           - {
               label: "uhodi service value (in RUB)",
               name: "uhodi_value",
+              widget: "string",
+            }
+          - {
+              label: "uhodi additional description",
+              name: "uhodi_description",
+              widget: "string",
+            }
+      - label: "Uhodi additional prices"
+        name: "uhodi_additional_prices"
+        widget: "list"
+        fields:
+          - { label: "uhodi service name", name: "uhodi_key", widget: "string" }
+          - {
+              label: "uhodi service value (in RUB)",
+              name: "uhodi_value",
+              widget: "string",
+            }
+          - {
+              label: "uhodi additional description",
+              name: "uhodi_description",
               widget: "string",
             }
