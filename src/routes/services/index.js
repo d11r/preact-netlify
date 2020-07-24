@@ -2,6 +2,17 @@ import { h } from "preact";
 import { Link } from "preact-router/match";
 import { usePrerenderData } from "@preact/prerender-data-provider";
 
+import Markdown from "markdown-to-jsx";
+const parseMD = require("parse-md").default;
+
+const getImgPath = (p) => {
+  if (p.split("/").length === 2) {
+    return `../..${p}`;
+  } else {
+    return `../../${p.split("/").slice(-2).join("/")}`;
+  }
+};
+
 const Services = () => {
   const [data, isLoading] = usePrerenderData({ url: "/services" });
   const content = data.data;
@@ -25,27 +36,28 @@ const Services = () => {
       </a>
       <aside id="betty-aside">
         <div class="betty-logo">
-          <a href="index.html">
-            <img src="../../images/logo.png" alt="" />
+          <a href="/">
+            <img src="../../images/logo.png" alt="Yes Nail Logo" />
           </a>
           <h1>
-            <a href="index.html">VUK Nails</a> <span>Center of Beauty</span>
+            <a href="/">{m.sidebar.salonName}</a>{" "}
+            <span>{m.sidebar.address}</span>
           </h1>
         </div>
 
         <nav id="betty-main-menu">
           <ul>
             <li>
-              <a href="/">Главная страница</a>
+              <a href="#">Главная страница</a>
             </li>
             <li>
-              <a href="/#about">О нас</a>
+              <a href="#about">О нас</a>
             </li>
             <li>
-              <a href="/#services">Наши услуги</a>
+              <a href="#services">Наши услуги</a>
             </li>
             <li>
-              <a href="/#contact">Контакты</a>
+              <a href="#contact">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -54,8 +66,8 @@ const Services = () => {
           <div class="feat-inner">
             <span class="icon et-clock"></span>
             <div class="feat-info">
-              <h5>Пн-Вс</h5>
-              <h6>10:00-20:00</h6>
+              <h5>{m.sidebar.workingDays}</h5>
+              <h6>{m.sidebar.workingHours}</h6>
             </div>
           </div>
         </div>
@@ -64,7 +76,7 @@ const Services = () => {
             <span class="icon et-phone"></span>
             <div class="feat-info">
               <h5>Телефон</h5>
-              <h6>+7(929)924-34-37</h6>
+              <h6>{m.sidebar.contactTelephone}</h6>
             </div>
           </div>
         </div>
@@ -72,8 +84,13 @@ const Services = () => {
         <div class="betty-footer">
           <ul>
             <li>
-              <a href="#">
+              <a href={m.sidebar.instagramURL}>
                 <i class="ti-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href={m.sidebar.facebookURL}>
+                <i class="ti-facebook"></i>
               </a>
             </li>
           </ul>
@@ -89,356 +106,154 @@ const Services = () => {
               >
                 <div class="mb-30" id="manikir">
                   <img
-                    src="../../images/services_2.jpg"
+                    src={getImgPath(m.services.serviceOnePic)}
                     class="img-fluid mb-30"
-                    alt=""
                   />
                   <h3>Маникюр</h3>
                   <p>
-                    Ухоженные руки – визитная карточка каждой уважающей себя
-                    девушки и женщины, а красивый и главное правильный маникюр –
-                    неотъемлемая часть имиджа, определяющего стиль.
+                    <Markdown>
+                      {parseMD(m.prices.manicure_title).content}
+                    </Markdown>
                   </p>
                 </div>
 
                 <div class="row services-price mb-30">
                   <div class="col-md-12">
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Маникюр без покрытия <span class="price">700 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Маникюр + лак обычный <span class="price">1200 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Маникюр + гель-лак Vogue, Nail Republic
-                        <span class="price">1350 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Маникюр + гель-лак Mistique
-                        <span class="price">1450 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комби (аппаратный ) маникюр без покрытия
-                        <span class="price">800 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комби (аппаратный) маникюр + гель-лак Vogue, Nail
-                        Republic
-                        <span class="price">1500 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комбинированный (аппаратный) маникюр + гель-лак Mistique
-                        <span class="price">1600 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Детский маникюр (до 13 лет)
-                        <span class="price">350 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Наращивание ногтей
-                        <span class="price">3200 ₽ </span>
-                        <p>маникюр, наращивание, покрытие</p>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Коррекция наращивание
-                        <span class="price">2200 ₽ </span>
-                        <p>снятие маникюр, укрепление гелем, покрытие</p>
-                      </h5>
-                    </div>
+                    {m.prices.manicure_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.manicure_key}
+                          <span class="price">{p.manicure_value} ₽</span>
+                          {p.manicure_description && (
+                            <p>{p.manicure_description}</p>
+                          )}
+                        </h5>
+                      </div>
+                    ))}
 
                     <h5>Дополнительно</h5>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Снятие нарощенных ногтей
-                        <span class="price">900 ₽ </span>
-                      </h5>
-                    </div>
-
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Снятие нарощенных ногтей
-                        <span class="price">900 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Снятие укрепления
-                        <span class="price">500 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Ремонт акриль/гель (1 пальчик)
-                        <span class="price">150 ₽ </span>
-                      </h5>
-                    </div>
+                    {m.prices.manicure_additional_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.manicure_key}
+                          <span class="price">{p.manicure_value} ₽</span>
+                          {p.manicure_description && (
+                            <p>{p.manicure_description}</p>
+                          )}
+                        </h5>
+                      </div>
+                    ))}
 
                     <h5>Лечебные Системы</h5>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Лечебное покрытие VITA GEL
-                        <span class="price">500 ₽</span>
-                      </h5>
-                    </div>
+                    {m.prices.manicure_healing_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.manicure_key}
+                          <span class="price">{p.manicure_value} ₽</span>
+                          {p.manicure_description && (
+                            <p>{p.manicure_description}</p>
+                          )}
+                        </h5>
+                      </div>
+                    ))}
 
                     <h5>Дизайны</h5>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Лунный, обратный френч, втирка, легкий
-                        <span class="price">50 ₽ один пальчик </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Омбре, френч, слайдер, сложный
-                        <span class="price">100 ₽ один пальчик </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        French
-                        <span class="price">400 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Художественная роспись
-                        <span class="price">350 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Стразы
-                        <span class="price">
-                          200-500 ₽ (зависит от количества)
-                        </span>
-                      </h5>
-                    </div>
+                    {m.prices.manicure_design_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.manicure_key}
+                          <span class="price">{p.manicure_value} ₽</span>
+                          {p.manicure_description && (
+                            <p>{p.manicure_description}</p>
+                          )}
+                        </h5>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
                 <div class="mb-30" id="pedikir">
                   <img
-                    src="../../images/services_4.jpg"
+                    src={getImgPath(m.services.serviceTwoPic)}
                     class="img-fluid mb-30"
                     alt=""
                   />
                   <h3>Педикюр</h3>
-                  <p>
-                    Неотъемлемый «аксессуар» современной девушки в любое время
-                    года, а вот про педикюр, к сожалению, многие забывают с
-                    наступлением холодов. Но наши ноги, как и руки, нуждаются в
-                    круглогодичном уходе. Существует заблуждение, что педикюр —
-                    это уход только за ногтями.
-                  </p>
-                  <p>
-                    Однако на самом деле — это комплексный уход за ногтями и
-                    кожей стоп, включающий в себя удаление огрубевших частиц,
-                    мозолей, натоптышей и коррекцию формы ногтей. Кроме того,
-                    педикюр способен решить не только эстетические проблемы, но
-                    и медицинские: неприятный запах, грибок, глубокие трещины и
-                    вросшие ногти могут исчезнуть, если вы будете посещать
-                    нашего мастера хотя бы раз в месяц.
-                  </p>
+                  <Markdown>
+                    {parseMD(m.prices.pedicure_title).content}
+                  </Markdown>
                 </div>
                 <div class="row services-price mb-30">
                   <div class="col-md-12">
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Классический педикюр без покрытия
-                        <span class="price">1150 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Классический педикюр + лак
-                        <span class="price">1600 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Классический педикюр + гель-лак Vogue, Nail Republic
-                        <span class="price">1900 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Классический педикюр + гель-лак Mystique
-                        <span class="price">2100 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комбинированный (аппаратный) педикюр без покрытия
-                        <span class="price">1450 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комбинированный (аппаратный) + обычный лак
-                        <span class="price">1900 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комбинированный (аппаратный) + гель-лак Vogue, Nail
-                        Republic
-                        <span class="price">2200 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Комбинированный (аппаратный ) + гель-лак Mistique -
-                        <span class="price">2400 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Детский педикюр (до 13 лет)
-                        <span class="price">600 ₽ </span>
-                      </h5>
-                    </div>
+                    {m.prices.pedicure_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.pedicure_key}
+                          <span class="price">{p.pedicure_value} ₽</span>
+                          {p.pedicure_description && (
+                            <p>{p.pedicure_description}</p>
+                          )}
+                        </h5>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div class="mb-30" id="brovi">
                   <img
-                    src="../../images/services_3.jpg"
+                    src={getImgPath(m.services.serviceThreePic)}
                     class="img-fluid mb-30"
                     alt=""
                   />
                   <h3>Брови</h3>
-                  <p>
-                    Красивые, ухоженные брови имеют большое значение в создании
-                    стильного и модного образа. Правильная форма бровей делает
-                    взгляд более открытым и выразительным, а глаза при
-                    подходящей вам форме бровей, кажутся больше.
-                  </p>
+                  <Markdown>{parseMD(m.prices.brovi_title).content}</Markdown>
                 </div>
 
                 <div class="row services-price mb-30">
                   <div class="col-md-12">
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Форма бровей пинцет/нить
-                        <span class="price">900-1000 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Коррекция + окрашивание бровей
-                        <span class="price">1200 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Окрашивание бровей краска/хна
-                        <span class="price">700-800 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Коррекция бровей пинцет/нить
-                        <span class="price">600-700 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Удаление усиков ниткой/воском
-                        <span class="price">300 ₽ </span>
-                      </h5>
-                    </div>
+                    {m.prices.brovi_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.brovi_key}
+                          <span class="price">{p.brovi_value} ₽</span>
+                          {p.brovi_description && <p>{p.brovi_description}</p>}
+                        </h5>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
                 <div class="mb-30" id="uhodi">
                   <img
-                    src="../../images/services_1.jpg"
+                    src={getImgPath(m.services.serviceFourPic)}
                     class="img-fluid mb-30"
                     alt=""
                   />
                   <h3>Уходы за волосами</h3>
-                  <p>
-                    Шикарные волосы как визитная карточка для каждой женщины.
-                    Красота женских волос многогранна - великолепны волосы
-                    прямые или вьющиеся, светлые или темные, гладкие и
-                    шелковистые. Многообразие женских причесок объединяет одно -
-                    волосы должны быть здоровыми, красивыми и блестящими.
-                  </p>
+                  <Markdown>{parseMD(m.prices.uhodi_title).content}</Markdown>
                 </div>
 
                 <div class="row services-price mb-30">
                   <div class="col-md-12">
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Без мытья /с мытьём
-                        <span class="price">500/1000 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Брашинг, плойки, по форме
-                        <span class="price">1500-2000 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Вечерняя Прическа
-                        <span class="price">1000-1500 ₽</span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Коррекция бровей пинцет/нить
-                        <span class="price">600-700 ₽ </span>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Удаление усиков ниткой/воском
-                        <span class="price">300 ₽ </span>
-                      </h5>
-                    </div>
+                    {m.prices.uhodi_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.uhodi_key}
+                          <span class="price">{p.uhodi_value} ₽</span>
+                          {p.uhodi_description && <p>{p.uhodi_description}</p>}
+                        </h5>
+                      </div>
+                    ))}
 
                     <h5>Дополнительные Услуги</h5>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Антивозрастной уход мгновенного действия
-                        <span class="price">2100/2400/2700/3000 ₽ </span>
-                        <p>ALTEREGO</p>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Уход для увлажнения волос
-                        <span class="price">900/1200/1500/1800 ₽ </span>
-                        <p>HYDRATE</p>
-                      </h5>
-                    </div>
-                    <div class="services-price-info">
-                      <h5 class="title">
-                        Дисциплинирующий уход для пушащихся волос
-                        <span class="price">900/1200/1500/1800 ₽</span>
-                        <p>EGOLISS</p>
-                      </h5>
-                    </div>
+                    {m.prices.uhodi_additional_prices.map((p) => (
+                      <div class="services-price-info">
+                        <h5 class="title">
+                          {p.uhodi_key}
+                          <span class="price">{p.uhodi_value} ₽</span>
+                          {p.uhodi_description && <p>{p.uhodi_description}</p>}
+                        </h5>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
