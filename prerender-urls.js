@@ -7,7 +7,7 @@ const frontpageData = generateFileList(join(__dirname, "content")).nodes;
 
 module.exports = () => {
   const pages = [
-    { url: "/services/" },
+    { url: "/services/", data: frontpageData },
     {
       url: "/",
       seo: {

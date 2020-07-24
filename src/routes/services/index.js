@@ -1,13 +1,28 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
+import { usePrerenderData } from "@preact/prerender-data-provider";
 
 const Services = () => {
+  const [data, isLoading] = usePrerenderData({ url: "/services" });
+  const content = data.data;
+  const m = {};
+  content.forEach((c) => {
+    if (c.id === "team") {
+      m[c.id] = [];
+      for (let i = 0; i < c.edges.length; i++)
+        m[c.id].push({ ...c.edges[i].details });
+    } else {
+      m[c.id] = { ...c.edges[0].details };
+    }
+  });
+
+  console.log(m);
+
   return (
     <div id="betty-page">
       <a href="#" class="js-betty-nav-toggle betty-nav-toggle">
         <i></i>
       </a>
-
       <aside id="betty-aside">
         <div class="betty-logo">
           <a href="index.html">
@@ -64,7 +79,6 @@ const Services = () => {
           </ul>
         </div>
       </aside>
-
       <div id="betty-main">
         <div class="betty-services">
           <div class="container-fluid">
@@ -484,20 +498,27 @@ const Services = () => {
           </div>
         </div>
       </div>
-
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-
-      <script src="../../style/js/jquery.min.js"></script>
-      <script src="../../style/js/modernizr-2.6.2.min.js"></script>
-      <script src="../../style/js/jquery.easing.1.3.js"></script>
-      <script src="../../style/js/jquery.waypoints.min.js"></script>
-      <script src="../../style/js/jquery.flexslider-min.js"></script>
-      <script src="../../style/js/sticky-kit.min.js"></script>
-      <script src="../../style/js/jquery.magnific-popup.min.js"></script>
-      <script src="../../style/js/owl.carousel.min.js"></script>
-      <script src="../../style/js/main.js"></script>
+      <script src="js/jquery.min.js" />
+      <script src="js/modernizr-2.6.2.min.js" />
+      <script src="js/jquery.easing.1.3.js" />
+      <script src="js/jquery.waypoints.min.js" />
+      <script src="js/jquery.flexslider-min.js" />
+      <script src="js/sticky-kit.min.js" />
+      <script src="js/jquery.magnific-popup.min.js" />
+      <script src="js/owl.carousel.min.js" />}
+      <script src="js/main.js" />
+      <link rel="itemprop" src="/css/bootstrap.css" />
+      <link rel="itemprop" src="/css/animate.css" />
+      <link rel="itemprop" src="/css/owl.carousel.min.css" />
+      <link rel="itemprop" src="/css/owl.theme.defaults.min.css" />
+      <link rel="itemprop" src="/css/themify-icons.css" />
+      <link rel="itemprop" src="/css/flaticon.css" />
+      <link rel="itemprop" src="/css/flexslider.css" />
+      <link rel="itemprop" src="/css/magnific-popup.css" />
+      <link rel="itemprop" src="/css/style.css" />
     </div>
   );
 };
