@@ -24,4 +24,26 @@ manicure_prices:
   - manicure_key: Коррекция наращивание
     manicure_value: "2200"
     manicure_description: снятие маникюр, укрепление гелем, покрытие
+manicure_additional_prices:
+  - manicure_key: Снятие нарощенных ногтей
+    manicure_value: "900"
+  - manicure_key: Снятие укрепления
+    manicure_value: "500"
+  - manicure_key: Ремонт акриль/гель (1 пальчик)
+    manicure_value: "150"
+manicure_healing_prices:
+  - manicure_key: Лечебное покрытие VITA GEL
+    manicure_value: "500"
+manicure_design_prices:
+  - manicure_key: Лунный, обратный френч, втирка, легкий
+    manicure_value: 50 один пальчик
+  - manicure_key: Омбре, френч, слайдер, сложный
+    manicure_value: 100 один пальчик
+  - manicure_key: French
+    manicure_value: "400"
+  - manicure_key: Художественная роспись
+    manicure_value: "350"
+  - manicure_key: Стразы
+    manicure_value: "200"
+    manicure_description: 200-500 (зависит от количества)
 ---
