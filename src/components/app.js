@@ -8,6 +8,7 @@ import Services from "../routes/services";
 import NotFoundPage from "../routes/notfound";
 
 // import css
+import "bootstrap/dist/css/bootstrap.css";
 import "../style/css/animate.css";
 import "../style/css/bootstrap.css";
 import "../style/css/et-lineicons.css";
