@@ -316,16 +316,6 @@ const Services = () => {
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-
-      <link rel="itemprop" src="css/bootstrap.css" />
-      <link rel="itemprop" src="css/animate.css" />
-      <link rel="itemprop" src="css/owl.carousel.min.css" />
-      <link rel="itemprop" src="css/owl.theme.defaults.min.css" />
-      <link rel="itemprop" src="css/themify-icons.css" />
-      <link rel="itemprop" src="css/flaticon.css" />
-      <link rel="itemprop" src="css/flexslider.css" />
-      <link rel="itemprop" src="css/magnific-popup.css" />
-      <link rel="itemprop" src="css/style.css" />
     </div>
   );
 };
