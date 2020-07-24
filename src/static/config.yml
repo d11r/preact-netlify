@@ -285,62 +285,30 @@ collections:
           name: "manicure_prices",
           widget: "list",
           fields:
-            - {
-              label: "manicure service name",
-              name: "manicure_key",
-              widget: "string",
-            }
-            - {
-              label: "manicure service value (in RUB)",
-              name: "manicure_value",
-              widget: "string",
-            }
+            - {label: "manicure service name",name: "manicure_key",widget: "string"}
+            - {label: "manicure service value (in RUB)",name: "manicure_value",widget: "string"}
         }
       - {
           label: "Pedicure prices",
           name: "pedicure_prices",
           widget: "list",
           fields:
-            - {
-              label: "pedicure service name",
-              name: "pedicure_key",
-              widget: "string",
-            }
-            - {
-              label: "pedicure service value (in RUB)",
-              name: "pedicure_value",
-              widget: "string",
-            }
+            - {label: "pedicure service name",name: "pedicure_key",widget: "string"}
+            - {label: "pedicure service value (in RUB)",name: "pedicure_value",widget: "string"}
         }
       - {
           label: "Brovi prices",
           name: "brovi_prices",
           widget: "list",
           fields:
-            - {
-              label: "brovi service name",
-              name: "brovi_key",
-              widget: "string",
-            }
-            - {
-              label: "brovi service value (in RUB)",
-              name: "brovi_value",
-              widget: "string",
-            }
+            - {label: "brovi service name",name: "brovi_key",widget: "string"}
+            - {label: "brovi service value (in RUB)",name: "brovi_value",widget: "string"}
         }
       - {
           label: "Uhodi prices",
           name: "uhodi_prices",
           widget: "list",
           fields:
-            - {
-              label: "uhodi service name",
-              name: "uhodi_key",
-              widget: "string",
-            }
-            - {
-              label: "uhodi service value (in RUB)",
-              name: "uhodi_value",
-              widget: "string",
-            }
+            - {label: "uhodi service name",name: "uhodi_key",widget: "string"}
+            - {label: "uhodi service value (in RUB)",name: "uhodi_value",widget: "string"}
         }
