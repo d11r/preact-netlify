@@ -9,15 +9,15 @@ import $ from "jquery";
 
 // import css
 import "bootstrap/dist/css/bootstrap.css";
-import "../style/css/animate.css";
-import "../style/css/et-lineicons.css";
-import "../style/css/flaticon.css";
-import "../style/css/flexslider.css";
-import "../style/css/magnific-popup.css";
-import "../style/css/owl.carousel.min.css";
-import "../style/css/owl.theme.default.min.css";
-import "../style/css/style.css";
-import "../style/css/themify-icons.css";
+import "../../style/css/animate.css";
+import "../../style/css/et-lineicons.css";
+import "../../style/css/flaticon.css";
+import "../../style/css/flexslider.css";
+import "../../style/css/magnific-popup.css";
+import "../../style/css/owl.carousel.min.css";
+import "../../style/css/owl.theme.default.min.css";
+import "../../style/css/style.css";
+import "../../style/css/themify-icons.css";
 
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
