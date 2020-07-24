@@ -323,7 +323,7 @@ const Services = () => {
       <script src="/js/jquery.flexslider-min.js" />
       <script src="/js/sticky-kit.min.js" />
       <script src="/js/jquery.magnific-popup.min.js" />
-      <script src="/js/owl.carousel.min.js" />}
+      <script src="/js/owl.carousel.min.js" />
       <script src="/js/main.js" />
       <link rel="itemprop" src="/css/bootstrap.css" />
       <link rel="itemprop" src="/css/animate.css" />
