@@ -54,11 +54,11 @@ const Home = () => {
       </a>
       <aside id="betty-aside">
         <div class="betty-logo">
-          <a href="index.html">
+          <a href="/">
             <img src="../../images/logo.png" alt="Yes Nail Logo" />
           </a>
           <h1>
-            <a href="index.html">{m.sidebar.salonName}</a>{" "}
+            <a href="/">{m.sidebar.salonName}</a>{" "}
             <span>{m.sidebar.address}</span>
           </h1>
         </div>
