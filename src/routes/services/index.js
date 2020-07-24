@@ -48,16 +48,16 @@ const Services = () => {
         <nav id="betty-main-menu">
           <ul>
             <li>
-              <a href="#">Главная страница</a>
+              <a href="/">Главная страница</a>
             </li>
             <li>
-              <a href="#about">О нас</a>
+              <a href="/">О нас</a>
             </li>
             <li>
-              <a href="#services">Наши услуги</a>
+              <a href="/">Наши услуги</a>
             </li>
             <li>
-              <a href="#contact">Контакты</a>
+              <a href="/">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -316,15 +316,15 @@ const Services = () => {
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-      <script src="js/jquery.min.js" />
-      <script src="js/modernizr-2.6.2.min.js" />
-      <script src="js/jquery.easing.1.3.js" />
-      <script src="js/jquery.waypoints.min.js" />
-      <script src="js/jquery.flexslider-min.js" />
-      <script src="js/sticky-kit.min.js" />
-      <script src="js/jquery.magnific-popup.min.js" />
-      <script src="js/owl.carousel.min.js" />}
-      <script src="js/main.js" />
+      <script src="/js/jquery.min.js" />
+      <script src="/js/modernizr-2.6.2.min.js" />
+      <script src="/js/jquery.easing.1.3.js" />
+      <script src="/js/jquery.waypoints.min.js" />
+      <script src="/js/jquery.flexslider-min.js" />
+      <script src="/js/sticky-kit.min.js" />
+      <script src="/js/jquery.magnific-popup.min.js" />
+      <script src="/js/owl.carousel.min.js" />}
+      <script src="/js/main.js" />
       <link rel="itemprop" src="/css/bootstrap.css" />
       <link rel="itemprop" src="/css/animate.css" />
       <link rel="itemprop" src="/css/owl.carousel.min.css" />
