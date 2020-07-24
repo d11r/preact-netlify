@@ -280,6 +280,9 @@ collections:
     create: true
     widget: "object"
     fields:
+      - label: "Manicure title"
+        name: "manicure_title"
+        widget: "markdown"
       - label: "Manicure prices"
         name: "manicure_prices"
         widget: "list"
@@ -360,6 +363,9 @@ collections:
               widget: "string",
               required: false,
             }
+      - label: "Pedicure title"
+        name: "pedicure_title"
+        widget: "markdown"
       - label: "Pedicure prices"
         name: "pedicure_prices"
         widget: "list"
@@ -380,6 +386,9 @@ collections:
               widget: "string",
               required: false,
             }
+      - label: "Brovi title"
+        name: "brovi_title"
+        widget: "markdown"
       - label: "Brovi prices"
         name: "brovi_prices"
         widget: "list"
@@ -396,6 +405,9 @@ collections:
               widget: "string",
               required: false,
             }
+      - label: "Uhodi title"
+        name: "uhodi_title"
+        widget: "markdown"
       - label: "Uhodi prices"
         name: "uhodi_prices"
         widget: "list"
