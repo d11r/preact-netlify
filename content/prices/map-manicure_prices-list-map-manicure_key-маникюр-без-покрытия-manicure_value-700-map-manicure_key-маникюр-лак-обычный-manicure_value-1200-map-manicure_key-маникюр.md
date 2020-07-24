@@ -46,4 +46,30 @@ manicure_design_prices:
   - manicure_key: Стразы
     manicure_value: "200"
     manicure_description: 200-500 (зависит от количества)
+pedicure_prices:
+  - pedicure_key: Классический педикюр
+    pedicure_value: "1150"
+    pedicure_description: без покрытия
+  - pedicure_key: Классический педикюр + лак
+    pedicure_value: "1600"
+  - pedicure_key: Классический педикюр
+    pedicure_value: "1900"
+    pedicure_description: + гель-лак Vogue, Nail Republic
+  - pedicure_key: Классический педикюр
+    pedicure_value: "2100"
+    pedicure_description: + гель-лак Mystique
+  - pedicure_key: Комбинированный (аппаратный)
+    pedicure_description: без покрытия
+    pedicure_value: "1450"
+  - pedicure_key: Комбинированный (аппаратный)
+    pedicure_description: + обычный лак
+    pedicure_value: "1900"
+  - pedicure_key: "Комбинированный (аппаратный) "
+    pedicure_description: + гель-лак Vogue, Nail Republic
+    pedicure_value: "2200"
+  - pedicure_key: Комбинированный (аппаратный)
+    pedicure_description: гель-лак Mistique
+    pedicure_value: "2400"
+  - pedicure_key: Детский педикюр (до 13 лет)
+    pedicure_value: "600"
 ---
