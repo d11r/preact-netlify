@@ -298,6 +298,7 @@ collections:
               label: "manicure additional description",
               name: "manicure_description",
               widget: "string",
+              required: false,
             }
       - label: "Manicure additional prices"
         name: "manicure_additional_prices"
@@ -317,6 +318,7 @@ collections:
               label: "manicure additional description",
               name: "manicure_description",
               widget: "string",
+              required: false,
             }
       - label: "Manicure healing prices"
         name: "manicure_healing_prices"
@@ -336,6 +338,7 @@ collections:
               label: "manicure additional description",
               name: "manicure_description",
               widget: "string",
+              required: false,
             }
       - label: "Manicure designs prices"
         name: "manicure_design_prices"
@@ -355,6 +358,7 @@ collections:
               label: "manicure additional description",
               name: "manicure_description",
               widget: "string",
+              required: false,
             }
       - label: "Pedicure prices"
         name: "pedicure_prices"
@@ -374,6 +378,7 @@ collections:
               label: "pedicure additional description",
               name: "pedicure_description",
               widget: "string",
+              required: false,
             }
       - label: "Brovi prices"
         name: "brovi_prices"
@@ -389,6 +394,7 @@ collections:
               label: "brovi additional description",
               name: "brovi_description",
               widget: "string",
+              required: false,
             }
       - label: "Uhodi prices"
         name: "uhodi_prices"
@@ -404,6 +410,7 @@ collections:
               label: "uhodi additional description",
               name: "uhodi_description",
               widget: "string",
+              required: false,
             }
       - label: "Uhodi additional prices"
         name: "uhodi_additional_prices"
@@ -419,4 +426,5 @@ collections:
               label: "uhodi additional description",
               name: "uhodi_description",
               widget: "string",
+              required: false,
             }
