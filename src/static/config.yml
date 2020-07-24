@@ -278,6 +278,7 @@ collections:
     label: "Service Prices"
     folder: "content/prices"
     create: true
+    widget: "list"
     fields:
       - {
           label: "Manicure prices",
