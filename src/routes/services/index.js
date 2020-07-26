@@ -317,6 +317,46 @@ const Services = () => {
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
 
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/bootstrap.css"
+        as="style"
+      />
+      <link type="text/css" rel="itemprop" src="/css/animate.css" as="style" />
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/owl.carousel.min.css"
+        as="style"
+      />
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/owl.theme.defaults.min.css"
+        as="style"
+      />
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/themify-icons.css"
+        as="style"
+      />
+      <link type="text/css" rel="itemprop" src="/css/flaticon.css" as="style" />
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/flexslider.css"
+        as="style"
+      />
+      <link
+        type="text/css"
+        rel="itemprop"
+        src="/css/magnific-popup.css"
+        as="style"
+      />
+      <link type="text/css" rel="itemprop" src="/css/style.css" as="style" />
+
       <script src="js/jquery.min.js" />
       <script src="js/modernizr-2.6.2.min.js" />
       <script src="js/jquery.easing.1.3.js" />
@@ -326,19 +366,6 @@ const Services = () => {
       <script src="js/jquery.magnific-popup.min.js" />
       <script src="js/owl.carousel.min.js" />
       <script src="js/main.js" />
-      <link type="text/css" rel="itemprop" src="/css/bootstrap.css" />
-      <link type="text/css" rel="itemprop" src="/css/animate.css" />
-      <link type="text/css" rel="itemprop" src="/css/owl.carousel.min.css" />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/owl.theme.defaults.min.css"
-      />
-      <link type="text/css" rel="itemprop" src="/css/themify-icons.css" />
-      <link type="text/css" rel="itemprop" src="/css/flaticon.css" />
-      <link type="text/css" rel="itemprop" src="/css/flexslider.css" />
-      <link type="text/css" rel="itemprop" src="/css/magnific-popup.css" />
-      <link type="text/css" rel="itemprop" src="/css/style.css" />
     </div>
   );
 };
