@@ -326,13 +326,19 @@ const Services = () => {
       <script src="js/jquery.magnific-popup.min.js" />
       <script src="js/owl.carousel.min.js" />
       <script src="js/main.js" />
-      <link rel="itemprop" src="css/bootstrap.css" />
-      <link rel="itemprop" src="css/animate.css" />
-      <link rel="itemprop" src="css/themify-icons.css" />
-      <link rel="itemprop" src="css/flaticon.css" />
-      <link rel="itemprop" src="css/flexslider.css" />
-      <link rel="itemprop" src="css/magnific-popup.css" />
-      <link rel="itemprop" src="css/style.css" />
+      <link type="text/css" rel="stylesheet" src="/css/bootstrap.css" />
+      <link type="text/css" rel="stylesheet" src="/css/animate.css" />
+      <link type="text/css" rel="stylesheet" src="/css/owl.carousel.min.css" />
+      <link
+        type="text/css"
+        rel="stylesheet"
+        src="/css/owl.theme.defaults.min.css"
+      />
+      <link type="text/css" rel="stylesheet" src="/css/themify-icons.css" />
+      <link type="text/css" rel="stylesheet" src="/css/flaticon.css" />
+      <link type="text/css" rel="stylesheet" src="/css/flexslider.css" />
+      <link type="text/css" rel="stylesheet" src="/css/magnific-popup.css" />
+      <link type="text/css" rel="stylesheet" src="/css/style.css" />
     </div>
   );
 };
