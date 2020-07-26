@@ -317,45 +317,35 @@ const Services = () => {
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
 
+      <link type="textcss" rel="itemprop" src="css/bootstrap.css" as="style" />
+      <link type="textcss" rel="itemprop" src="css/animate.css" as="style" />
       <link
-        type="text/css"
+        type="textcss"
         rel="itemprop"
-        src="/css/bootstrap.css"
-        as="style"
-      />
-      <link type="text/css" rel="itemprop" src="/css/animate.css" as="style" />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/owl.carousel.min.css"
+        src="css/owl.carousel.min.css"
         as="style"
       />
       <link
-        type="text/css"
+        type="textcss"
         rel="itemprop"
-        src="/css/owl.theme.defaults.min.css"
+        src="css/owl.theme.defaults.min.css"
         as="style"
       />
       <link
-        type="text/css"
+        type="textcss"
         rel="itemprop"
-        src="/css/themify-icons.css"
+        src="css/themify-icons.css"
         as="style"
       />
-      <link type="text/css" rel="itemprop" src="/css/flaticon.css" as="style" />
+      <link type="textcss" rel="itemprop" src="css/flaticon.css" as="style" />
+      <link type="textcss" rel="itemprop" src="css/flexslider.css" as="style" />
       <link
-        type="text/css"
+        type="textcss"
         rel="itemprop"
-        src="/css/flexslider.css"
+        src="css/magnific-popup.css"
         as="style"
       />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/magnific-popup.css"
-        as="style"
-      />
-      <link type="text/css" rel="itemprop" src="/css/style.css" as="style" />
+      <link type="textcss" rel="itemprop" src="css/style.css" as="style" />
 
       <script src="js/jquery.min.js" />
       <script src="js/modernizr-2.6.2.min.js" />
