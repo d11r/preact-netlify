@@ -15,7 +15,6 @@ import "../../style/css/flexslider.css";
 import "../../style/css/magnific-popup.css";
 import "../../style/css/owl.carousel.min.css";
 import "../../style/css/owl.theme.default.min.css";
-import "../../style/css/style.css";
 import "../../style/css/themify-icons.css";
 
 const getImgPath = (p) => {
