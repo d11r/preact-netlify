@@ -2190,5 +2190,6 @@ ol.comment-list li .children li {
   #betty-hero .flexslider .slider-text > .slider-text-inner .desc {
     padding: 12px;
     border-radius: 6px;
+    left: -10px;
   }
 }
