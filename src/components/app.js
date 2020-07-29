@@ -23,7 +23,7 @@ export default class App extends Component {
           <Router onChange={this.handleRoute}>
             <Home path="/" />
             <Services path="/services" />
-            <NotFoundPage type="404" default />
+            {/*<NotFoundPage type="404" default />*/}
           </Router>
         </div>
       </Provider>
