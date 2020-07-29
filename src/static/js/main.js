@@ -28,12 +28,10 @@
   };
   // Full Height
   var fullHeight = function () {
-    if (!isMobile.any()) {
+    $(".js-fullheight").css("height", $(window).height());
+    $(window).resize(function () {
       $(".js-fullheight").css("height", $(window).height());
-      $(window).resize(function () {
-        $(".js-fullheight").css("height", $(window).height());
-      });
-    }
+    });
   };
   // Animations
   var contentWayPoint = function () {
