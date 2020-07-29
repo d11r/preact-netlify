@@ -322,8 +322,21 @@ const Services = () => {
       <script src="/js/jquery.flexslider-min.js" />
       <script src="/js/sticky-kit.min.js" />
       <script src="/js/jquery.magnific-popup.min.js" />
-
       <script src="/js/main.js" />
+      <link rel="stylesheet" href="/css/animate.css" type="text/css" />
+      <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+      <link rel="stylesheet" href="/css/et-lineicons.css" type="text/css" />
+      <link rel="stylesheet" href="/css/flaticon.css" type="text/css" />
+      <link rel="stylesheet" href="/css/flexslider.css" type="text/css" />
+      <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+      <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
+      <link
+        rel="stylesheet"
+        href="/css/owl.theme.default.min.css"
+        type="text/css"
+      />
+      <link rel="stylesheet" href="/css/themify-icons.css" type="text/css" />
+      <link rel="stylesheet" href="/css/style.css" type="text/css" />
     </div>
   );
 };
