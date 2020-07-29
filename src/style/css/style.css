@@ -23,7 +23,7 @@
 ------------------------------------------------------------------- */
 
 /* ======= Google Fonts  ======= */
-@import url("https://fonts.googleapis.com/css?family=Rambla:300,400,700,900|Playfair+Display:400,400i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700,900|Playfair+Display:400,400i,700,700i,900,900i&display=swap");
 
 /* ======= Default style  ======= */
 html,
@@ -35,7 +35,7 @@ body {
   padding: 0;
 }
 body {
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.75em;
   font-weight: 400;
@@ -54,7 +54,7 @@ h6 {
   margin: 0 0 15px 0;
 }
 p {
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.75em;
   font-weight: 400;
@@ -133,7 +133,7 @@ textarea {
   box-shadow: none;
   display: block;
   width: 100%;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.75em;
   color: #666;
@@ -528,7 +528,7 @@ input[type="checkbox"] {
   margin: 7px 0 0 0;
   padding: 0 0 7px 0;
   list-style: none;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   line-height: 1.75em;
   border-bottom: 2px solid rgba(255, 255, 255, 0.04);
@@ -543,7 +543,7 @@ input[type="checkbox"] {
   margin: 7px 0 0 0;
   padding: 0 0 7px 0;
   list-style: none;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.75em;
   color: #fbf7f9;
@@ -593,7 +593,7 @@ input[type="checkbox"] {
 #betty-aside #betty-main-menu ul ul li a {
   padding: 12px 0 12px 30px;
   list-style: none;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #fbf7f9;
   font-size: 16px;
   font-weight: 500;
@@ -695,7 +695,7 @@ input[type="checkbox"] {
   font-size: 15px;
   margin-bottom: 0px;
   margin-top: 3px;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #fff;
 }
 .betty-contact-info h6 {
@@ -703,7 +703,7 @@ input[type="checkbox"] {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 0px;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 /* footer contact info */
 .betty-contact-info2 {
@@ -739,7 +739,7 @@ input[type="checkbox"] {
   font-size: 16px;
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #000;
 }
 .betty-contact-info2 h6 {
@@ -747,7 +747,7 @@ input[type="checkbox"] {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0px;
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 /* sidebar footer */
 .betty-footer p {
@@ -1335,7 +1335,7 @@ body.offcanvas .betty-nav-toggle {
 .services-price-info {
 }
 .services-price-info .title {
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   color: #e52e71;
   margin-bottom: 10px;
@@ -2000,7 +2000,7 @@ ol.comment-list li .children li {
   border: 1px solid #ececec;
 }
 .btn-contact {
-  font-family: "Rambla", serif;
+  font-family: "Nunito", serif;
   font-size: 16px;
   font-weight: 400;
   border-radius: 0;
@@ -2023,7 +2023,7 @@ ol.comment-list li .children li {
   color: #fff;
 }
 #message {
-  font-family: "Rambla", sans-serif;
+  font-family: "Nunito", sans-serif;
   height: 150px;
   padding: 12px;
   border: 1px solid #ececec;
