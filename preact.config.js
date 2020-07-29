@@ -4,7 +4,7 @@ const imageminMozjpeg = require("imagemin-mozjpeg");
 
 module.exports = (config, env) => {
   netlifyPlugin(config);
-  config.output.publicPath = "/css/";
+  config.output.publicPath = "/";
   env.production &&
     !env.ssr &&
     config.plugins.push(
