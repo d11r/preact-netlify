@@ -7,16 +7,6 @@ const parseMD = require("parse-md").default;
 import script from "react-script-tag";
 import $ from "jquery";
 
-import "../../style/css/animate.css";
-import "../../style/css/bootstrap.css";
-import "../../style/css/et-lineicons.css";
-import "../../style/css/flaticon.css";
-import "../../style/css/flexslider.css";
-import "../../style/css/magnific-popup.css";
-import "../../style/css/owl.carousel.min.css";
-import "../../style/css/owl.theme.default.min.css";
-import "../../style/css/themify-icons.css";
-
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
@@ -577,6 +567,19 @@ const Home = () => {
       <script src="/js/sticky-kit.min.js" />
       <script src="/js/jquery.magnific-popup.min.js" />
       <script src="/js/main.js" />
+      <link rel="stylesheet" href="/css/animate.css" type="text/css" />
+      <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+      <link rel="stylesheet" href="/css/et-lineicons.css" type="text/css" />
+      <link rel="stylesheet" href="/css/flaticon.css" type="text/css" />
+      <link rel="stylesheet" href="/css/flexslider.css" type="text/css" />
+      <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+      <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
+      <link
+        rel="stylesheet"
+        href="/css/owl.theme.default.min.css"
+        type="text/css"
+      />
+      <link rel="stylesheet" href="/css/themify-icons.css" type="text/css" />
       <link rel="stylesheet" href="/css/style.css" type="text/css" />
     </div>
   );
