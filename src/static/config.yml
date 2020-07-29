@@ -440,8 +440,18 @@ collections:
               widget: "string",
               required: false,
             }
-      - label: "Manicure Gallery",
-        name: "manicure_gallery",
+      - label: "Manicure Gallery"
+        name: "manicure_gallery"
+        widget: "list"
+        field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+      - label: "Pedicure Gallery"
+        name: "pedicure_gallery"
         widget: "list",
         field:
             {
@@ -450,9 +460,9 @@ collections:
               widget: "image",
               allow_multiple: true,
             },
-      - label: "Pedicure Gallery",
-        name: "pedicure_gallery",
-        widget: "list",
+      - label: "Brovi Gallery"
+        name: "brovi_gallery"
+        widget: "list"
         field:
             {
               label: "image",
@@ -460,19 +470,9 @@ collections:
               widget: "image",
               allow_multiple: true,
             },
-      - label: "Brovi Gallery",
-        name: "brovi_gallery",
-        widget: "list",
-        field:
-            {
-              label: "image",
-              name: "image",
-              widget: "image",
-              allow_multiple: true,
-            },
-      - label: "Uhodi Gallery",
-        name: "uhodi_gallery",
-        widget: "list",
+      - label: "Uhodi Gallery"
+        name: "uhodi_gallery"
+        widget: "list"
         field:
             {
               label: "image",
