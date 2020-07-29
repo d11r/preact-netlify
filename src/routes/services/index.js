@@ -400,6 +400,8 @@ const Services = () => {
       />
       <link rel="stylesheet" href="/css/themify-icons.css" type="text/css" />
       <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+      <script src="/js/main.js" />
     </div>
   );
 };

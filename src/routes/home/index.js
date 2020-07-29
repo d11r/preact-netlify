@@ -566,7 +566,7 @@ const Home = () => {
       <script src="/js/jquery.flexslider-min.js" />
       <script src="/js/sticky-kit.min.js" />
       <script src="/js/jquery.magnific-popup.min.js" />
-      <script src="/js/main.js" />
+      <script src="/js/main.js" type="text/javscript" />
       <link rel="stylesheet" href="/css/animate.css" type="text/css" />
       <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
       <link rel="stylesheet" href="/css/et-lineicons.css" type="text/css" />
@@ -581,6 +581,8 @@ const Home = () => {
       />
       <link rel="stylesheet" href="/css/themify-icons.css" type="text/css" />
       <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+      <script src="/js/main.js" />
     </div>
   );
 };
