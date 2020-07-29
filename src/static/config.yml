@@ -274,6 +274,59 @@ collections:
             },
         }
 
+  - name: "galleries"
+    label: "Galleries"
+    folder: "content/galleries"
+    create: true
+    fields:
+      - {
+          label: "Manicure pictures",
+          name: "manicure_pictures",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
+      - {
+          label: "Pedicure pictures",
+          name: "pedicure_pictures",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
+      - {
+          label: "Brovi pictures",
+          name: "brovi_pictures",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
+      - {
+          label: "Uhodi pictures",
+          name: "uhodi_pictures",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
   - name: "prices"
     label: "Service Prices"
     folder: "content/prices"
@@ -440,43 +493,3 @@ collections:
               widget: "string",
               required: false,
             }
-      - label: "Manicure Gallery"
-        name: "manicure_gallery"
-        widget: "list"
-        field:
-            {
-              label: "image",
-              name: "image",
-              widget: "image",
-              allow_multiple: true,
-            },
-      - label: "Pedicure Gallery"
-        name: "pedicure_gallery"
-        widget: "list",
-        field:
-            {
-              label: "image",
-              name: "image",
-              widget: "image",
-              allow_multiple: true,
-            },
-      - label: "Brovi Gallery"
-        name: "brovi_gallery"
-        widget: "list"
-        field:
-            {
-              label: "image",
-              name: "image",
-              widget: "image",
-              allow_multiple: true,
-            },
-      - label: "Uhodi Gallery"
-        name: "uhodi_gallery"
-        widget: "list"
-        field:
-            {
-              label: "image",
-              name: "image",
-              widget: "image",
-              allow_multiple: true,
-            },
