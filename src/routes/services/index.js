@@ -5,6 +5,17 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
+import "../../style/css/animate.css";
+import "../../style/css/bootstrap.css";
+import "../../style/css/et-lineicons.css";
+import "../../style/css/flaticon.css";
+import "../../style/css/flexslider.css";
+import "../../style/css/magnific-popup.css";
+import "../../style/css/owl.carousel.min.css";
+import "../../style/css/owl.theme.default.min.css";
+import "../../style/css/style.css";
+import "../../style/css/themify-icons.css";
+
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
@@ -317,67 +328,13 @@ const Services = () => {
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
 
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/bootstrap./css"
-        as="style"
-      />
-      <link type="text/css" rel="itemprop" src="/css/animate./css" as="style" />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/owl.carousel.min./css"
-        as="style"
-      />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/owl.theme.defaults.min./css"
-        as="style"
-      />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/themify-icons./css"
-        as="style"
-      />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/flaticon./css"
-        as="style"
-      />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/flexslider./css"
-        as="style"
-      />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/magnific-popup./css"
-        as="style"
-      />
-      <link type="text/css" rel="itemprop" src="/css/style./css" as="style" />
+      <script src="/js/jquery.easing.1.3.js" />
+      <script src="/js/jquery.waypoints.min.js" />
+      <script src="/js/jquery.flexslider-min.js" />
+      <script src="/js/sticky-kit.min.js" />
+      <script src="/js/jquery.magnific-popup.min.js" />
 
-      <script src="js/jquery.min.js" />
-      <script src="js/modernizr-2.6.2.min.js" />
-      <script src="js/jquery.easing.1.3.js" />
-      <script src="js/jquery.waypoints.min.js" />
-      <script src="js/jquery.flexslider-min.js" />
-      <script src="js/sticky-kit.min.js" />
-      <script src="js/jquery.magnific-popup.min.js" />
-      <script src="js/owl.carousel.min.js" />
-      <script src="js/main.js" />
-      <link rel="itemprop" src="css/bootstrap.css" />
-      <link rel="itemprop" src="css/animate.css" />
-      <link rel="itemprop" src="css/themify-icons.css" />
-      <link rel="itemprop" src="css/flaticon.css" />
-      <link rel="itemprop" src="css/flexslider.css" />
-      <link rel="itemprop" src="css/magnific-popup.css" />
-      <link rel="itemprop" src="css/style.css" />
+      <script src="/js/main.js" />
     </div>
   );
 };
