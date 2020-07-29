@@ -5,17 +5,6 @@ import { usePrerenderData } from "@preact/prerender-data-provider";
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
 
-import "../../style/css/animate.css";
-import "../../style/css/bootstrap.css";
-import "../../style/css/et-lineicons.css";
-import "../../style/css/flaticon.css";
-import "../../style/css/flexslider.css";
-import "../../style/css/magnific-popup.css";
-import "../../style/css/owl.carousel.min.css";
-import "../../style/css/owl.theme.default.min.css";
-import "../../style/css/style.css";
-import "../../style/css/themify-icons.css";
-
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
