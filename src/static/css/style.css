@@ -2185,3 +2185,10 @@ ol.comment-list li .children li {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+
+@media screen and (max-width: 400px) {
+  #betty-hero .flexslider .slider-text > .slider-text-inner .desc {
+    padding: 12px;
+    border-radius: 6px;
+  }
+}

@@ -2180,3 +2180,10 @@ ol.comment-list li .children li {
   line-height: 60px;
   font-size: 2rem;
 }
+
+@media screen and (max-width: 400px) {
+  #betty-hero .flexslider .slider-text > .slider-text-inner .desc {
+    padding: 12px;
+    border-radius: 6px;
+  }
+}
