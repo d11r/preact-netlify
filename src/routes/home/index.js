@@ -11,7 +11,7 @@ const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
   } else {
-    return `../../style/${p.split("/").slice(-2).join("/")}`;
+    return `../../${p.split("/").slice(-2).join("/")}`;
   }
 };
 
