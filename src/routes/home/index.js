@@ -577,8 +577,8 @@ const Home = () => {
       <script src="/js/jquery.flexslider-min.js" />
       <script src="/js/sticky-kit.min.js" />
       <script src="/js/jquery.magnific-popup.min.js" />
-
       <script src="/js/main.js" />
+      <link rel="stylesheet" href="/css/style.css" type="text/css" />
     </div>
   );
 };
