@@ -1,7 +1,7 @@
 ---
 uhodi_pictures:
-  - /src/style/images/uhod1.jpg
-  - /src/style/images/uhod2.jpg
-  - /src/style/images/uhod3.jpg
-  - /src/style/images/uhod4.jpg
+  - /src/static/images/uhod1.jpg
+  - /src/static/images/uhod2.jpg
+  - /src/static/images/uhod3.jpg
+  - /src/static/images/uhod4.jpg
 ---
