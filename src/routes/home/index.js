@@ -7,6 +7,17 @@ const parseMD = require("parse-md").default;
 import script from "react-script-tag";
 import $ from "jquery";
 
+import "../../style/css/animate.css";
+import "../../style/css/bootstrap.css";
+import "../../style/css/et-lineicons.css";
+import "../../style/css/flaticon.css";
+import "../../style/css/flexslider.css";
+import "../../style/css/magnific-popup.css";
+import "../../style/css/owl.carousel.min.css";
+import "../../style/css/owl.theme.default.min.css";
+import "../../style/css/style.css";
+import "../../style/css/themify-icons.css";
+
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
@@ -561,28 +572,13 @@ const Home = () => {
       <a href="https://wa.me/79299243437" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp whatsapp-float"></i>
       </a>
-      <script src="js/jquery.min.js" />
-      <script src="js/modernizr-2.6.2.min.js" />
-      <script src="js/jquery.easing.1.3.js" />
-      <script src="js/jquery.waypoints.min.js" />
-      <script src="js/jquery.flexslider-min.js" />
-      <script src="js/sticky-kit.min.js" />
-      <script src="js/jquery.magnific-popup.min.js" />
-      <script src="js/owl.carousel.min.js" />}
-      <script src="js/main.js" />
-      <link type="text/css" rel="itemprop" src="/css/bootstrap.css" />
-      <link type="text/css" rel="itemprop" src="/css/animate.css" />
-      <link type="text/css" rel="itemprop" src="/css/owl.carousel.min.css" />
-      <link
-        type="text/css"
-        rel="itemprop"
-        src="/css/owl.theme.defaults.min.css"
-      />
-      <link type="text/css" rel="itemprop" src="/css/themify-icons.css" />
-      <link type="text/css" rel="itemprop" src="/css/flaticon.css" />
-      <link type="text/css" rel="itemprop" src="/css/flexslider.css" />
-      <link type="text/css" rel="itemprop" src="/css/magnific-popup.css" />
-      <link type="text/css" rel="itemprop" src="/css/style.css" />
+      <script src="/js/jquery.easing.1.3.js" />
+      <script src="/js/jquery.waypoints.min.js" />
+      <script src="/js/jquery.flexslider-min.js" />
+      <script src="/js/sticky-kit.min.js" />
+      <script src="/js/jquery.magnific-popup.min.js" />
+
+      <script src="/js/main.js" />
     </div>
   );
 };
