@@ -144,12 +144,14 @@ collections:
       - {
           label: "Employee profession Primary",
           name: "employee_profession_primary",
+          required: false,
           widget: "string",
           default: "Мастер маникюра/педикюра",
         }
       - {
           label: "Employee profession Secondary",
           name: "employee_profession_secondary",
+          required: false,
           widget: "string",
           default: "Бровист",
         }

@@ -9,7 +9,7 @@ const getImgPath = (p) => {
   if (p.split("/").length === 2) {
     return `../..${p}`;
   } else {
-    return `../../${p.split("/").slice(-2).join("/")}`;
+    return `../../style/${p.split("/").slice(-2).join("/")}`;
   }
 };
 
@@ -157,6 +157,22 @@ const Services = () => {
                       </div>
                     ))}
 
+                    {m.galleries.manicure_pictures && (
+                      <div class="brands">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-12 owl-carousel owl-theme">
+                              {m.galleries.manicure_pictures.map((p) => (
+                                <div class="brand-logo">
+                                  <img src={getImgPath(p)} alt="" />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                     <h5>Дизайны</h5>
                     {m.prices.manicure_design_prices.map((p) => (
                       <div class="services-price-info">
@@ -196,6 +212,21 @@ const Services = () => {
                         </h5>
                       </div>
                     ))}
+                    {m.galleries.pedicure_pictures && (
+                      <div class="brands">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-12 owl-carousel owl-theme">
+                              {m.galleries.pedicure_pictures.map((p) => (
+                                <div class="brand-logo">
+                                  <img src={getImgPath(p)} alt="" />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div class="mb-30" id="brovi">
@@ -219,6 +250,22 @@ const Services = () => {
                         </h5>
                       </div>
                     ))}
+
+                    {m.galleries.brovi_pictures && (
+                      <div class="brands">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-12 owl-carousel owl-theme">
+                              {m.galleries.brovi_pictures.map((p) => (
+                                <div class="brand-logo">
+                                  <img src={getImgPath(p)} alt="" />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -243,6 +290,22 @@ const Services = () => {
                         </h5>
                       </div>
                     ))}
+
+                    {m.galleries.uhodi_pictures && (
+                      <div class="brands">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-12 owl-carousel owl-theme">
+                              {m.galleries.uhodi_pictures.map((p) => (
+                                <div class="brand-logo">
+                                  <img src={getImgPath(p)} alt="" />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
 
                     <h5>Дополнительные Услуги</h5>
                     {m.prices.uhodi_additional_prices.map((p) => (
