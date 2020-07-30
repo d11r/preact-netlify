@@ -178,7 +178,7 @@
     }
   });
 
-  if ($.isFunction("owlCarousel")) {
+  function owlCarouselInit() {
     $(".testimonials .owl-carousel").owlCarousel({
       loop: true,
       margin: 30,
@@ -247,6 +247,14 @@
         },
       },
     });
+  }
+
+  if ($.isFunction("owlCarousel")) {
+    owlCarouselInit();
+  } else {
+    setTimeout(function () {
+      owlCarouselInit();
+    }, 200);
   }
   // Testimonials owlCarousel
 

@@ -30,6 +30,8 @@ const Home = () => {
     }
   });
 
+  console.log(m);
+
   // Netlify admin redirect
   useEffect(() => {
     if (
@@ -535,7 +537,7 @@ const Home = () => {
               <div class="col-md-12 owl-carousel owl-theme">
                 {brands.map((b) => (
                   <div class="brand-logo">
-                    <img src={b} />
+                    <img src={b} alt="" />
                   </div>
                 ))}
               </div>
