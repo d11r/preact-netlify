@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
 import { usePrerenderData } from "@preact/prerender-data-provider";
+import $ from "jquery";
 
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
@@ -27,13 +28,22 @@ const Services = () => {
     }
   });
 
-  console.log(m);
+  const toggleNav = (e) => {
+    var $this = $(this);
+    if ($("body").hasClass("offcanvas")) {
+      $this.removeClass("active");
+      $("body").removeClass("offcanvas");
+    } else {
+      $this.addClass("active");
+      $("body").addClass("offcanvas");
+    }
+  };
 
   return (
     <div id="betty-page">
-      <a href="#" class="js-betty-nav-toggle betty-nav-toggle">
+      <span class="js-betty-nav-toggle betty-nav-toggle" onClick={toggleNav}>
         <i></i>
-      </a>
+      </span>
       <aside id="betty-aside">
         <div class="betty-logo">
           <a href="/">

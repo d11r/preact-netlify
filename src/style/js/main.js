@@ -72,20 +72,6 @@
       }
     );
   };
-  // Burger Menu
-  var burgerMenu = function () {
-    $(".js-betty-nav-toggle").on("click", function (event) {
-      event.preventDefault();
-      var $this = $(this);
-      if ($("body").hasClass("offcanvas")) {
-        $this.removeClass("active");
-        $("body").removeClass("offcanvas");
-      } else {
-        $this.addClass("active");
-        $("body").addClass("offcanvas");
-      }
-    });
-  };
   // Click outside of offcanvass
   var mobileMenuOutsideClick = function () {
     $(document).click(function (e) {
@@ -177,7 +163,6 @@
   $(function () {
     fullHeight();
     contentWayPoint();
-    burgerMenu();
     mobileMenuOutsideClick();
     sliderMain();
     stickyFunction();

@@ -29,7 +29,6 @@ const Home = () => {
       m[c.id] = { ...c.edges[0].details };
     }
   });
-  console.log(m);
 
   // Netlify admin redirect
   useEffect(() => {
@@ -47,11 +46,22 @@ const Home = () => {
 
   const brands = m.products.brand_pictures.map((p) => getImgPath(p));
 
+  const toggleNav = (e) => {
+    var $this = $(this);
+    if ($("body").hasClass("offcanvas")) {
+      $this.removeClass("active");
+      $("body").removeClass("offcanvas");
+    } else {
+      $this.addClass("active");
+      $("body").addClass("offcanvas");
+    }
+  };
+
   return (
     <div id="betty-page">
-      <a href="#" class="js-betty-nav-toggle betty-nav-toggle">
+      <span class="js-betty-nav-toggle betty-nav-toggle" onClick={toggleNav}>
         <i></i>
-      </a>
+      </span>
       <aside id="betty-aside">
         <div class="betty-logo">
           <a href="/">

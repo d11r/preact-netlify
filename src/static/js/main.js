@@ -1,6 +1,5 @@
 (function () {
-  console.log("in my main js");
-  ("use strict");
+  "use strict";
   var isMobile = {
     Android: function () {
       return navigator.userAgent.match(/Android/i);
@@ -29,10 +28,12 @@
   };
   // Full Height
   var fullHeight = function () {
-    $(".js-fullheight").css("height", $(window).height());
-    $(window).resize(function () {
+    if (!isMobile.any()) {
       $(".js-fullheight").css("height", $(window).height());
-    });
+      $(window).resize(function () {
+        $(".js-fullheight").css("height", $(window).height());
+      });
+    }
   };
   // Animations
   var contentWayPoint = function () {
@@ -70,20 +71,6 @@
         offset: "85%",
       }
     );
-  };
-  // Burger Menu
-  var burgerMenu = function () {
-    $(".js-betty-nav-toggle").on("click", function (event) {
-      event.preventDefault();
-      var $this = $(this);
-      if ($("body").hasClass("offcanvas")) {
-        $this.removeClass("active");
-        $("body").removeClass("offcanvas");
-      } else {
-        $this.addClass("active");
-        $("body").addClass("offcanvas");
-      }
-    });
   };
   // Click outside of offcanvass
   var mobileMenuOutsideClick = function () {
@@ -176,7 +163,6 @@
   $(function () {
     fullHeight();
     contentWayPoint();
-    burgerMenu();
     mobileMenuOutsideClick();
     sliderMain();
     stickyFunction();
@@ -192,7 +178,7 @@
     }
   });
 
-  function loadOwl() {
+  if ($.isFunction("owlCarousel")) {
     $(".testimonials .owl-carousel").owlCarousel({
       loop: true,
       margin: 30,
@@ -261,14 +247,6 @@
         },
       },
     });
-  }
-
-  if ($.isFunction("owlCarousel")) {
-    loadOwl();
-  } else {
-    setTimeout(() => {
-      loadOwl();
-    }, 200);
   }
   // Testimonials owlCarousel
 
