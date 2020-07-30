@@ -2188,3 +2188,13 @@ ol.comment-list li .children li {
     left: -10px;
   }
 }
+
+@media screen and (max-width: 340px) {
+  #betty-hero .flexslider .slider-text > .slider-text-inner h1 {
+    font-size: 1.5em;
+  }
+
+  #betty-hero .flexslider .slider-text > .slider-text-inner a {
+    font-size: 0.8em;
+  }
+}
