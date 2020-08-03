@@ -2185,3 +2185,9 @@ ol.comment-list li .children li {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+
+@media screen and (max-width: 300px) {
+  .btn-contact {
+    padding: 12px 12px;
+  }
+}

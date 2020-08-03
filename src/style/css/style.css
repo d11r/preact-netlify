@@ -2198,3 +2198,9 @@ ol.comment-list li .children li {
     font-size: 0.8em;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .btn-contact {
+    padding: 12px 12px;
+  }
+}
