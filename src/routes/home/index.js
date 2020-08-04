@@ -130,131 +130,31 @@ const Home = () => {
         <aside id="betty-hero" class="js-fullheight">
           <div class="flexslider js-fullheight">
             <ul class="slides">
-              <li
-                style={`
-                  background-image: url(${getImgPath(
-                    m.frontpage.frontImageOne
-                  )})
+              {m.frontpage.pics.map((p) => (
+                <li
+                  style={`
+                  background-image: url(${getImgPath(p)})
                 `}
-              >
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>{m.frontpage.frontpageHeading}</h1>
-                          <div class="btn btn-contact">
-                            <a href={`tel:${m.contact.contact_phone}`}>
-                              Связаться с администратором
-                            </a>
+                >
+                  <div class="overlay"></div>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12 js-fullheight slider-text">
+                        <div class="slider-text-inner">
+                          <div class="desc">
+                            <h1>{m.frontpage.frontpageHeading}</h1>
+                            <div class="btn btn-contact">
+                              <a href={`tel:${m.contact.contact_phone}`}>
+                                Связаться с администратором
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li
-                style={`
-                  background-image: url(${getImgPath(
-                    m.frontpage.frontImageTwo
-                  )})
-                `}
-              >
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>{m.frontpage.frontpageHeading}</h1>
-                          <div class="btn btn-contact">
-                            <a href={`tel:${m.contact.contact_phone}`}>
-                              Связаться с администратором
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={`
-                  background-image: url(${getImgPath(
-                    m.frontpage.frontImageThree
-                  )})
-                `}
-              >
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>{m.frontpage.frontpageHeading}</h1>
-                          <div class="btn btn-contact">
-                            <a href={`tel:${m.contact.contact_phone}`}>
-                              Связаться с администратором
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={`
-                  background-image: url(${getImgPath(
-                    m.frontpage.frontImageFour
-                  )})
-                `}
-              >
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>{m.frontpage.frontpageHeading}</h1>
-                          <div class="btn btn-contact">
-                            <a href={`tel:${m.contact.contact_phone}`}>
-                              Связаться с администратором
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                style={`
-                  background-image: url(${getImgPath(
-                    m.frontpage.frontImageFive
-                  )})
-                `}
-              >
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12 js-fullheight slider-text">
-                      <div class="slider-text-inner">
-                        <div class="desc">
-                          <h1>{m.frontpage.frontpageHeading}</h1>
-                          <div class="btn btn-contact">
-                            <a href={`tel:${m.contact.contact_phone}`}>
-                              Связаться с администратором
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </aside>
