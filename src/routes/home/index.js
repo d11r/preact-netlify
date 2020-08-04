@@ -30,8 +30,6 @@ const Home = () => {
     }
   });
 
-  console.log(m);
-
   // Netlify admin redirect
   useEffect(() => {
     if (
@@ -142,7 +140,11 @@ const Home = () => {
                       <div class="col-md-12 js-fullheight slider-text">
                         <div class="slider-text-inner">
                           <div class="desc">
-                            <h1>{m.frontpage.frontpageHeading}</h1>
+                            <h1>{m.promo.desc}</h1>
+                            <div class="btn btn-contact">
+                              <a href={m.promo.link}>{m.promo.btn_text}</a>
+                            </div>
+                            {/*<h1>{m.frontpage.frontpageHeading}</h1>*/}
                             {/*
                             for now, lera wants not to have this button
                             <div class="btn btn-contact">
@@ -170,14 +172,16 @@ const Home = () => {
                   class="col-md-12 animate-box"
                   data-animate-effect="fadeInLeft"
                 >
-                  {m.promo.h && <h2 class="betty-heading">{m.promo.h}</h2>}
-                  {m.promo.desc && (
-                    <span className="heading-meta promo-desc">
-                      {m.promo.desc}
-                    </span>
+                  {m.frontpage.frontpageHeading && (
+                    <h2 class="betty-heading">
+                      {m.frontpage.frontpageHeading}
+                    </h2>
                   )}
+
                   <div class="btn btn-contact">
-                    <a href={m.promo.link}>{m.promo.btn_text}</a>
+                    <a href={`tel:${m.contact.contact_phone}`}>
+                      Связаться с администратором
+                    </a>
                   </div>
                 </div>
               </div>
@@ -295,7 +299,7 @@ const Home = () => {
                     />
                   </div>
                   <div class="con">
-                    <a href="services">
+                    <a href="services#pedikir">
                       <h5>{m.services.serviceTwo}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
@@ -313,7 +317,7 @@ const Home = () => {
                     />
                   </div>
                   <div class="con">
-                    <a href="services">
+                    <a href="services#brovi">
                       <h5>{m.services.serviceThree}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>
@@ -331,7 +335,7 @@ const Home = () => {
                     />
                   </div>
                   <div class="con">
-                    <a href="services">
+                    <a href="services#uhodi">
                       <h5>{m.services.serviceFour}</h5>
                       <p>
                         <i class="ti-arrow-right"></i>

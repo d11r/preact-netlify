@@ -1,10 +1,13 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
+import { useRef, useEffect } from "preact/hooks";
 import { usePrerenderData } from "@preact/prerender-data-provider";
 import $ from "jquery";
 
 import Markdown from "markdown-to-jsx";
 const parseMD = require("parse-md").default;
+
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const getImgPath = (p) => {
   if (p.split("/").length === 2) {
@@ -38,6 +41,27 @@ const Services = () => {
       $("body").addClass("offcanvas");
     }
   };
+
+  const broviRef = useRef(null);
+  const uhodiRef = useRef(null);
+  const pedikirRef = useRef(null);
+
+  const executeScroll = (r) => scrollToRef(r);
+
+  const scrollURL = window.location.href.split("/").slice(-1)[0].split("#");
+
+  useEffect(() => {
+    if (scrollURL.length === 2) {
+      const scrollTo = scrollURL.slice(-1)[0];
+      if (scrollTo == "uhodi") {
+        executeScroll(uhodiRef);
+      } else if (scrollTo == "brovi") {
+        executeScroll(broviRef);
+      } else if (scrollTo == "pedikir") {
+        executeScroll(pedikirRef);
+      }
+    }
+  }, [scrollURL]);
 
   return (
     <div id="betty-page">
@@ -198,7 +222,7 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div class="mb-30" id="pedikir">
+                <div class="mb-30" id="pedikir" ref={pedikirRef}>
                   <img
                     src={getImgPath(m.services.serviceTwoPic)}
                     class="img-fluid mb-30"
@@ -239,7 +263,7 @@ const Services = () => {
                     )}
                   </div>
                 </div>
-                <div class="mb-30" id="brovi">
+                <div class="mb-30" id="brovi" ref={broviRef}>
                   <img
                     src={getImgPath(m.services.serviceThreePic)}
                     class="img-fluid mb-30"
@@ -279,7 +303,7 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div class="mb-30" id="uhodi">
+                <div class="mb-30" id="uhodi" ref={uhodiRef}>
                   <img
                     src={getImgPath(m.services.serviceFourPic)}
                     class="img-fluid mb-30"
