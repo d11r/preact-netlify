@@ -62,7 +62,7 @@ const Services = () => {
         }
       }
     }
-  }, [scrollURL]);
+  }, [window]);
 
   return (
     <div id="betty-page">
