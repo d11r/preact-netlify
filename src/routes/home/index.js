@@ -143,11 +143,14 @@ const Home = () => {
                         <div class="slider-text-inner">
                           <div class="desc">
                             <h1>{m.frontpage.frontpageHeading}</h1>
+                            {/*
+                            for now, lera wants not to have this button
                             <div class="btn btn-contact">
                               <a href={`tel:${m.contact.contact_phone}`}>
                                 Связаться с администратором
                               </a>
                             </div>
+                            */}
                           </div>
                         </div>
                       </div>
