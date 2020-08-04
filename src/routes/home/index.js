@@ -259,6 +259,7 @@ const Home = () => {
           </div>
         </aside>
 
+        {/*
         <div id="promo" className="betty-team">
           <div className="container-fluid">
             <div className="row">
@@ -275,6 +276,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        */}
 
         <div id="about" class="betty-about">
           <div class="container-fluid">
