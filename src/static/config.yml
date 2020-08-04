@@ -78,6 +78,12 @@ collections:
           widget: "string",
           default: "tel:+7(929)924-34-37",
         }
+      - {
+          label: "Promotion button text",
+          name: "btn_text",
+          widget: "string",
+          default: "Связаться с администратором",
+        }
 
   - name: "frontpage"
     label: "Frontpage"

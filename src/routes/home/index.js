@@ -269,7 +269,7 @@ const Home = () => {
                 <h2 class="betty-heading">{m.promo.h}</h2>
                 <span className="heading-meta">{m.promo.desc}</span>
                 <div class="btn btn-contact">
-                  <a href={m.promo.link}>Связаться с администратором</a>
+                  <a href={m.promo.link}>{m.promo.btn_text}</a>
                 </div>
               </div>
             </div>
