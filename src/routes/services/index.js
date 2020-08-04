@@ -49,15 +49,17 @@ const Services = () => {
   const executeScroll = (r) => scrollToRef(r);
 
   useEffect(() => {
-    const scrollURL = window?.location?.href.split("/").slice(-1)[0].split("#");
-    if (scrollURL.length === 2) {
-      const scrollTo = scrollURL.slice(-1)[0];
-      if (scrollTo == "uhodi") {
-        executeScroll(uhodiRef);
-      } else if (scrollTo == "brovi") {
-        executeScroll(broviRef);
-      } else if (scrollTo == "pedikir") {
-        executeScroll(pedikirRef);
+    if (window) {
+      const scrollURL = window.location.href.split("/").slice(-1)[0].split("#");
+      if (scrollURL.length === 2) {
+        const scrollTo = scrollURL.slice(-1)[0];
+        if (scrollTo == "uhodi") {
+          executeScroll(uhodiRef);
+        } else if (scrollTo == "brovi") {
+          executeScroll(broviRef);
+        } else if (scrollTo == "pedikir") {
+          executeScroll(pedikirRef);
+        }
       }
     }
   }, [scrollURL]);
