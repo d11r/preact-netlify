@@ -1,5 +1,5 @@
 ---
-salonName: VUK Nails
+salonName: VUK BEAUTY
 address: Ленинский проспект
 workingDays: Пн-Вс
 workingHours: 10:00-20:00
