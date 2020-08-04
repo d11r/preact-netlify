@@ -1,7 +1,7 @@
 ---
 enabled: true
-h: VUK Beauty Offer
+h: ""
 desc: Маникюр с покрытием при первом посещении — 999 ₽
 link: tel:+7(929)924-34-37
-btn_text: Записаться на услугу
+btn_text: Записаться
 ---
