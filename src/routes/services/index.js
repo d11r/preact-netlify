@@ -48,9 +48,8 @@ const Services = () => {
 
   const executeScroll = (r) => scrollToRef(r);
 
-  const scrollURL = window.location.href.split("/").slice(-1)[0].split("#");
-
   useEffect(() => {
+    const scrollURL = window?.location?.href.split("/").slice(-1)[0].split("#");
     if (scrollURL.length === 2) {
       const scrollTo = scrollURL.slice(-1)[0];
       if (scrollTo == "uhodi") {
