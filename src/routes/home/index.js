@@ -259,7 +259,6 @@ const Home = () => {
           </div>
         </aside>
 
-        {/*
         <div id="promo" className="betty-team">
           <div className="container-fluid">
             <div className="row">
@@ -267,8 +266,10 @@ const Home = () => {
                 class="col-md-12 animate-box"
                 data-animate-effect="fadeInLeft"
               >
-                <h2 class="betty-heading">{m.promo.h}</h2>
-                <span className="heading-meta">{m.promo.desc}</span>
+                {m.promo.h && <h2 class="betty-heading">{m.promo.h}</h2>}
+                {m.promo.desc && (
+                  <span className="heading-meta">{m.promo.desc}</span>
+                )}
                 <div class="btn btn-contact">
                   <a href={m.promo.link}>{m.promo.btn_text}</a>
                 </div>
@@ -276,7 +277,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        */}
 
         <div id="about" class="betty-about">
           <div class="container-fluid">
