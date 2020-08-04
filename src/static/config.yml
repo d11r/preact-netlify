@@ -53,6 +53,32 @@ collections:
           default: "https://www.facebook.com/VUK-NAILS-104670354667176/",
         }
 
+  - name: "promo"
+    label: "Promotion"
+    folder: "content/promo"
+    create: true
+    fields:
+      - {
+          label: "Promotion heading",
+          name: "h",
+          widget: "string",
+          required: false,
+          default: "VUK Beauty Offer",
+        }
+      - {
+          label: "Promotion description",
+          name: "desc",
+          widget: "string",
+          required: false,
+          default: "Маникюр с покрытием при первом посещении — 999₽",
+        }
+      - {
+          label: "Promotion link",
+          name: "link",
+          widget: "string",
+          default: "tel:+7(929)924-34-37",
+        }
+
   - name: "frontpage"
     label: "Frontpage"
     folder: "content/frontpage"

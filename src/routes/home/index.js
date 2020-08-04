@@ -259,6 +259,27 @@ const Home = () => {
           </div>
         </aside>
 
+        <div id="promo" className="betty-team">
+          <div className="container-fluid">
+            <div className="row">
+              <div
+                class="col-md-12 animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <h2 class="betty-heading">Sumthing</h2>
+                <span className="heading-meta">
+                  Something should be put here
+                </span>
+                <div class="btn btn-contact">
+                  <a href={`tel:${m.contact.contact_phone}`}>
+                    Связаться с администратором
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id="about" class="betty-about">
           <div class="container-fluid">
             <div class="row">
@@ -554,7 +575,7 @@ const Home = () => {
                     <img src="../../images/logo.png" alt="" />
                   </a>
                   <h2 class="text-center">
-                    VUK Nails
+                    {m.sidebar.salonName}
                     <span>{m.contact.contact_address}</span>
                   </h2>
                 </div>

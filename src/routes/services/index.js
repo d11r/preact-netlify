@@ -370,7 +370,7 @@ const Services = () => {
                     <img src="../../images/logo.png" alt="" />
                   </a>
                   <h2 class="text-center">
-                    VUK Nails
+                    {m.sidebar.salonName}
                     <span>Ленинский проспект д. 96 Б</span>
                   </h2>
                 </div>
