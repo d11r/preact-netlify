@@ -169,7 +169,9 @@ const Home = () => {
                 >
                   {m.promo.h && <h2 class="betty-heading">{m.promo.h}</h2>}
                   {m.promo.desc && (
-                    <span className="heading-meta">{m.promo.desc}</span>
+                    <span className="heading-meta promo-desc">
+                      {m.promo.desc}
+                    </span>
                   )}
                   <div class="btn btn-contact">
                     <a href={m.promo.link}>{m.promo.btn_text}</a>
