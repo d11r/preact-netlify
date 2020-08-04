@@ -59,6 +59,13 @@ collections:
     create: true
     fields:
       - {
+          label: "Promotion enabled (shown)",
+          name: "enabled",
+          widget: "boolean",
+          required: true,
+          default: true,
+        }
+      - {
           label: "Promotion heading",
           name: "h",
           widget: "string",
