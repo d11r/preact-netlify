@@ -91,6 +91,18 @@ collections:
     create: true
     fields:
       - {
+          label: "Frontpage pictures",
+          name: "pics",
+          widget: "list",
+          field:
+            {
+              label: "image",
+              name: "image",
+              widget: "image",
+              allow_multiple: true,
+            },
+        }
+      - {
           label: "Frontpage Heading",
           name: "frontpageHeading",
           widget: "string",
