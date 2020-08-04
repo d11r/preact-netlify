@@ -266,14 +266,10 @@ const Home = () => {
                 class="col-md-12 animate-box"
                 data-animate-effect="fadeInLeft"
               >
-                <h2 class="betty-heading">Sumthing</h2>
-                <span className="heading-meta">
-                  Something should be put here
-                </span>
+                <h2 class="betty-heading">{m.promo.h}</h2>
+                <span className="heading-meta">{m.promo.desc}</span>
                 <div class="btn btn-contact">
-                  <a href={`tel:${m.contact.contact_phone}`}>
-                    Связаться с администратором
-                  </a>
+                  <a href={m.promo.link}>Связаться с администратором</a>
                 </div>
               </div>
             </div>
