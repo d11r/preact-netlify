@@ -113,7 +113,7 @@ uhodi_prices:
     uhodi_description: в один тон
   - uhodi_key: Сложное окрашивание
     uhodi_value: 10000-15000
-    uhodi_description: ""
+    uhodi_description: консультация бесплатно
 uhodi_additional_prices:
   - uhodi_key: Антивозрастной уход мгновенного действия
     uhodi_description: ALTEREGO
