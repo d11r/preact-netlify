@@ -99,9 +99,21 @@ uhodi_prices:
   - uhodi_key: Вечерняя Прическа
     uhodi_value: 1000-1500
   - uhodi_key: Стрижка женская
-    uhodi_value: "3800"
+    uhodi_value: "3000"
   - uhodi_key: Стрижка мужская
     uhodi_value: "2000"
+  - uhodi_key: Окрашивание корней
+    uhodi_value: 4000-4500
+    uhodi_description: в один тон
+  - uhodi_key: "Окрашивание до плеч "
+    uhodi_value: 5000-5500
+    uhodi_description: в один тон
+  - uhodi_key: "Окрашивание длинных "
+    uhodi_value: 6000-6500
+    uhodi_description: в один тон
+  - uhodi_key: Сложное окрашивание
+    uhodi_value: 10000-15000
+    uhodi_description: ""
 uhodi_additional_prices:
   - uhodi_key: Антивозрастной уход мгновенного действия
     uhodi_description: ALTEREGO
